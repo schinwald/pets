@@ -1,4 +1,8 @@
+import { GameObjects } from 'phaser';
+import { Dimensions } from './Grid'
+
 import Point = Phaser.Geom.Point;
+import GameObject = Phaser.GameObjects.GameObject;
 
 
 
@@ -7,19 +11,25 @@ type RoomConfig = {
 }
 
 
+type TileConfig = {
+	coordinate: Point;
+	occupier: GameObject;
+}
+
+
 type GridConfig = {
-	rows: number;
-	columns: number;
+	dimensions: Dimensions;
 }
 
 
 type CellConfig = {
-	reserved: boolean;
 	position: Point;
+	data: any;
 }
 
 
 
 export { RoomConfig };
+export { TileConfig };
 export { GridConfig };
 export { CellConfig };

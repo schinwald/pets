@@ -1,68 +1,120 @@
-import { GridConfig } from "./Types";
-import { Cell } from "./Cell";
+import { GridConfig, CellConfig } from "./Types";
+import { Tile } from "./Room";
 
-import GameObject = Phaser.GameObjects.GameObject;
 import Point = Phaser.Geom.Point;
 
 
-
 class Grid {
-	private config: GridConfig;
+
+	private dimensions: Dimensions;
 	private cells: Array<Array<Cell>>;
-	private MAX = 64;
 
-
+	// creates a grid instance
 	constructor(config: GridConfig) {
 		this.init();
-		this.configure(config)
-		this.cells
+		this.configure(config);
 	}
 
-
+	// initialize grid
 	public init() {
-		this.cells = new Array<Array<Cell>>(this.MAX);
-		for(let i = 0; i < this.MAX; i++) {
-			this.cells[i] = new Array<Cell>(this.MAX);
-			for(let j = 0; j < this.MAX; j++) {
-				this.cells[i][j] = null;
-			}
-		}
+		this.dimensions = new Dimensions(0, 0);
+		this.cells = new Array<Array<Cell>>();
 	}
 
-
+	// configure grid
 	public configure(config: GridConfig) {
-		this.config = config;
+		if (config.dimensions.columns < this.dimensions.columns) return;
+		if (config.dimensions.rows < this.dimensions.rows) return;
 
-		for(let i = 0; i < this.config.columns; i++) {
-			for(let j = 0; j < this.config.rows; j++) {
-				if(this.cells[i][j] == null) {
-					this.cells[i][j] = new Cell({
-						reserved: false,
-						position: new Point(24 * j + 12, 24 * i + 12)
-					});
-				}
+		for(let i = this.dimensions.rows; i < config.dimensions.rows; i++) {
+			this.cells.push(new Array<Cell>());
+			for(let j = this.dimensions.columns; j < config.dimensions.columns; j++) {
+				this.cells[i].push(new Cell({
+					position: new Point(i, j),
+					data: null
+				}));
 			}
 		}
-	}
 
-	
-	public getRowLength(): number {
-		return this.config.rows;
+		this.dimensions = config.dimensions;
 	}
 
 
-	public getColumnLength(): number {
-		return this.config.columns;
+	public setCell(position: Point, data: any) {
+		if (position.x < 0 || this.dimensions.columns <= position.x) return null;
+		if (position.y < 0 || this.dimensions.rows <= position.y) return null;
+		return this.cells[position.x][position.y].setData(data);
 	}
 
+	// get the dimensions of the grid
+	public getDimensions(): Dimensions {
+		return this.dimensions;
+	}
 
-	public getCell(row: number, column: number): Cell {
-		if(row >= this.config.rows) return null;
-		if(column >= this.config.columns) return null;
-		return this.cells[row][column];
+	// get the cell at a specific position on the grid
+	public getCell(position: Point): Cell {
+		if (position.x < 0 || this.dimensions.columns <= position.x) return null;
+		if (position.y < 0 || this.dimensions.rows <= position.y) return null;
+		return this.cells[position.x][position.y];
 	}
 }
 
 
 
-export { Grid }
+class Cell {
+
+	private position: Point;
+	private data: Tile;
+
+
+	constructor(config: CellConfig) {
+		this.configure(config);
+	}
+
+
+	public configure(config: CellConfig) {
+		this.position = config.position;
+		this.data = config.data;
+	}
+
+
+	public setData(data: Tile) {
+		this.data = data;
+	}
+
+
+	public setPosition(x: number, y: number) {
+		this.position.x = x;
+		this.position.y = y;
+	}
+
+
+	public getData(): Tile {
+		return this.data;
+	}
+
+
+	public getPosition(): Point {
+		return this.position;
+	}
+}
+
+
+
+class Dimensions {
+
+	public rows: number;
+	public columns: number;
+
+
+	constructor(rows: number, columns: number) {
+		this.rows = rows;
+		this.columns = columns;
+	}
+}
+
+
+
+export { Grid };
+export { Cell };
+export { Dimensions };

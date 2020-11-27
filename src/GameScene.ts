@@ -2,6 +2,7 @@ import { Pet } from './Pet';
 import { Room } from './Room';
 
 import Scene = Phaser.Scene;
+import { Dimensions } from './Grid';
 
 
 
@@ -64,7 +65,12 @@ class GameScene extends Scene {
 			repeat: -1
 		});
 
-		this.room = new Room(this, { gridConfig: { rows: 5, columns: 5 } });
+		this.room = new Room(this, {
+			gridConfig: {
+				dimensions: new Dimensions(10, 10)
+			}
+		});
+
 
 		let pet = new Pet(this, 'bird');
 		this.room.invite(pet);

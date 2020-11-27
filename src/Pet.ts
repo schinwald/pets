@@ -25,7 +25,7 @@ class Pet {
 
 	public init() {
 		this.direction = 1;
-		this.position = new Point(12, 12);
+		this.position = new Point(0, 0);
 	}
 
 
@@ -37,6 +37,10 @@ class Pet {
 
 	public getPosition() {
 		return this.position;
+	}
+
+	public getSprite(): Sprite {
+		return this.sprite;
 	}
 
 	public move(x: number, y: number) {
