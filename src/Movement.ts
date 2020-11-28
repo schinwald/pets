@@ -58,10 +58,11 @@ class Movement {
 				let position = cell.getPosition();
 				console.log("(" + position.x + "," + position.y + ") : " + node.heuristic + " : " + node.cost + " : " + node.function);
 			});
-			let current = fringeQueue.removeAt(0);
+			let current = this.selectFromFringe(fringeQueue);
 			let ccell = current.data as Cell;
 			let cposition = ccell.getPosition();
 			console.log("current: (" + cposition.x + "," + cposition.y + ")");
+
 			// check if current node is the goal position
 			let cell = current.data as Cell;
 			let position = cell.getPosition();
@@ -140,6 +141,23 @@ class Movement {
 		}
 
 		return successors;
+	}
+
+
+	private selectFromFringe(fringeQueue: List<Node>): Node {
+		let first = fringeQueue.first;
+
+		let node = fringeQueue.next;
+		let i = 0;
+		while (node != null && first.function == node.function) {
+			node = fringeQueue.next;
+			i++;
+		}
+
+		let k = Math.floor(Math.random() * (i+1));
+		let selected = fringeQueue.removeAt(k);
+		console.log(0 + "-" + i + ":" + k);
+		return selected;
 	}
 
 
