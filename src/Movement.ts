@@ -52,16 +52,7 @@ class Movement {
 
 		// search until there is nothing left to search
 		while (fringeQueue.length != 0) {
-			console.log("fringe:");
-			fringeQueue.each(node => {
-				let cell = node.data as Cell;
-				let position = cell.getPosition();
-				console.log("(" + position.x + "," + position.y + ") : " + node.heuristic + " : " + node.cost + " : " + node.function);
-			});
 			let current = this.selectFromFringe(fringeQueue);
-			let ccell = current.data as Cell;
-			let cposition = ccell.getPosition();
-			console.log("current: (" + cposition.x + "," + cposition.y + ")");
 
 			// check if current node is the goal position
 			let cell = current.data as Cell;
@@ -156,7 +147,7 @@ class Movement {
 
 		let k = Math.floor(Math.random() * (i+1));
 		let selected = fringeQueue.removeAt(k);
-		console.log(0 + "-" + i + ":" + k);
+		
 		return selected;
 	}
 

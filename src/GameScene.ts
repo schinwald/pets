@@ -81,7 +81,7 @@ class GameScene extends Scene {
 
 
 	public update(time: number, delta: number) {
-		
+		this.room.update(time, delta);
 	}
 }
 

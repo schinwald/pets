@@ -41,7 +41,8 @@ class Room extends Group {
 		this.pets = new Array<Pet>();
 		
 		this.graphics = new Graphics(this.scene);
-		this.ellipse = new Ellipse(this.scene, -100, -100, Tile.SIZE/4, Tile.SIZE/4, 0x00aa00);
+		this.graphics.lineStyle(2, 0xffd300);
+		this.ellipse = new Ellipse(this.scene, -100, -100, Tile.SIZE/4, Tile.SIZE/4, 0xffd300);
 	}
 
 
@@ -67,6 +68,8 @@ class Room extends Group {
 					if (path != null) {
 						path.draw(this.graphics);
 						this.ellipse.setPosition(tile.getCoordinates().x, tile.getCoordinates().y + Tile.SIZE/2);
+						this.pets[0].move(path);
+						this.pets[0].setPosition(position);
 					} else {
 						this.ellipse.setPosition(this.pets[0].getPosition().x + Tile.SIZE/2, this.pets[0].getPosition().y + Tile.SIZE);
 					}
@@ -109,7 +112,6 @@ class Room extends Group {
 		}
 
 		this.graphics.setY(12);
-		this.graphics.lineStyle(2, 0x00aa00);
 		this.scene.add.existing(this.graphics);
 		this.scene.add.existing(this.ellipse);
 	}
@@ -118,6 +120,11 @@ class Room extends Group {
 	public invite(pet: Pet) {
 		this.pets.push(pet);
 		this.ellipse.setPosition(this.pets[0].getPosition().x + Tile.SIZE/2, this.pets[0].getPosition().y + Tile.SIZE);
+	}
+
+
+	public update(time: number, delta: number) {
+		this.pets.forEach(pet => pet.update(time, delta));
 	}
 }
 
