@@ -1,11 +1,12 @@
 import { Health } from "./Health";
-import { Room } from "./Room";
+import { Room, Tile } from "./Room";
 import { PathDebugger } from "./Debug";
 
 import Scene = Phaser.Scene;
 import Sprite = Phaser.GameObjects.Sprite;
 import Point = Phaser.Geom.Point;
 import PathFollower = Phaser.GameObjects.PathFollower;
+import Ellipse = Phaser.GameObjects.Ellipse;
 import Path = Phaser.Curves.Path;
 import Map = Phaser.Structs.Map;
 
@@ -15,6 +16,7 @@ class Pet {
 	private scene: Scene;
 	private type: string;
 	private sprite: Sprite;
+	private shadow: Ellipse;
 	private movement: PathFollower;
 	private health: Health;
 	private position: Point;
@@ -38,14 +40,20 @@ class Pet {
 
 
 	public create() {
-		this.sprite = new Sprite(this.scene, 12, 12, 'pet');
+		this.sprite = new Sprite(this.scene, Tile.SIZE/2, Tile.SIZE, 'pet');
 		this.sprite.play(this.type + '-idle');
-		this.sprite.setOrigin(0, 0);
+		this.sprite.setOrigin(0.5, 1);
 		this.sprite.setDepth(2);
 		this.scene.add.existing(this.sprite);
 
+		this.shadow = new Ellipse(this.scene, Tile.SIZE/2, Tile.SIZE, Tile.SIZE/2, Tile.SIZE/4, 0x000000, 0.15);
+		this.shadow.setDepth(1);
+		this.shadow.setOrigin(0.5, 0.5);
+		this.scene.add.existing(this.shadow);
+
 		if (this.type == 'dino') this.pathDebugger = new PathDebugger(this.scene, 0x67b66b);
 		if (this.type == 'bird') this.pathDebugger = new PathDebugger(this.scene, 0xffd300);
+		this.pathDebugger.setPathFollower(this.movement);
 	}
 
 	public setRoom(room: Room) {
@@ -66,10 +74,9 @@ class Pet {
 
 	public move(position: Point) {
 		let path = this.room.findPath(this.position, position);
-		if (path == null || path.getLength() == 0) return;
+		if (path == null || path.getPoints().length == 0) return;
 
 		this.position = position;
-		this.pathDebugger.setPathFollower(this.movement);
 
 		let speed = 15;
 		this.movement.setPath(path);
@@ -97,7 +104,8 @@ class Pet {
 			}
 		}
 
-		this.sprite.setPosition(this.movement.x, this.movement.y);
+		this.sprite.setPosition(this.movement.x + Tile.SIZE/2, this.movement.y + Tile.SIZE);
+		this.shadow.setPosition(this.movement.x + Tile.SIZE/2, this.movement.y + Tile.SIZE);
 	}
 }
 

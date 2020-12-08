@@ -35,7 +35,7 @@ class PathDebugger {
 		this.graphics.fillStyle(this.color);
 
 		if (this.pathFollower != null) {
-			if (this.pathFollower.path != null) {
+			if (this.pathFollower.isFollowing()) {
 				let current = this.pathFollower.pathVector;
 				current.add(new Vector2(Tile.SIZE/2, Tile.SIZE/2));
 				let points = this.pathFollower.path.getPoints();
@@ -58,13 +58,6 @@ class PathDebugger {
 					k++;
 				}
 				this.graphics.strokePath();
-
-				this.graphics.fillCircle(current.x, current.y, Tile.SIZE/8);
-
-				if (k > 0) {
-					let end = points[k-1];
-					this.graphics.fillCircle(end.x, end.y, Tile.SIZE/8);
-				}
 			}
 		}
 	}
