@@ -50,7 +50,8 @@ class Room extends Group {
 				let position = new Point(i, j);
 				let tile = new Tile({
 					coordinate: new Point(Tile.SIZE * i + Tile.SIZE/2, Tile.SIZE * j + Tile.SIZE/2),
-					occupier: null
+					gameObject: null,
+					blocked: false
 				});
 				this.grid.setCell(position, tile);
 				let zone = new Phaser.GameObjects.Zone(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + 12, 24, 24);
@@ -73,7 +74,7 @@ class Room extends Group {
 				let tile = cell.getData();
 				let rectangle = new Rectangle(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + Tile.SIZE/2, Tile.SIZE, Tile.SIZE, 0x000000);
 				this.scene.add.existing(rectangle);
-				tile.setOccupier(rectangle);
+				tile.setGameObject(rectangle);
 			}
 		}
 
@@ -84,7 +85,7 @@ class Room extends Group {
 				let tile = cell.getData();
 				let rectangle = new Rectangle(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + Tile.SIZE/2, Tile.SIZE, Tile.SIZE, 0x000000);
 				this.scene.add.existing(rectangle);
-				tile.setOccupier(rectangle);
+				tile.setGameObject(rectangle);
 			}
 		}
 
@@ -95,7 +96,7 @@ class Room extends Group {
 				let tile = cell.getData();
 				let rectangle = new Rectangle(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + Tile.SIZE/2, Tile.SIZE, Tile.SIZE, 0x000000);
 				this.scene.add.existing(rectangle);
-				tile.setOccupier(rectangle);
+				tile.setGameObject(rectangle);
 			}
 		}
 	}
@@ -134,12 +135,24 @@ class Tile {
 		this.config = config;
 	}
 
-	public setOccupier(occupier: GameObject) {
-		this.config.occupier = occupier;
+
+	public setGameObject(gameObject: GameObject) {
+		this.config.gameObject = gameObject;
 	}
 
-	public getOccupier(): GameObject {
-		return this.config.occupier;
+
+	public setBlocked(blocked: boolean) {
+		this.config.blocked = blocked;
+	}
+
+
+	public isBlocked(): boolean {
+		return this.config.blocked;
+	}
+
+
+	public getGameObject(): GameObject {
+		return this.config.gameObject;
 	}
 	
 	public getCoordinates(): Point {

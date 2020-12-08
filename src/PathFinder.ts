@@ -62,8 +62,8 @@ class PathFinder {
 				let points = new List<Point>(null);
 				while (current) {
 					let cell = current.data as Cell;
-					let coordinates = cell.getData().getCoordinates();
-					points.addAt(coordinates, 0);
+					let position = cell.getPosition();
+					points.addAt(position, 0);
 					current = current.parent;
 				}
 
@@ -126,7 +126,7 @@ class PathFinder {
 			// check if positions are valid and add them to node children
 			if (cell != null) {
 				let data = cell.getData();
-				if (data.getOccupier() == null) {
+				if (data.getGameObject() == null) {
 					successors.push(new Node(parent, cell));
 				}
 			}

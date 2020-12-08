@@ -1,3 +1,4 @@
+import { Vector } from "matter";
 import { Tile } from "./Room";
 
 import Scene = Phaser.Scene;
@@ -7,6 +8,9 @@ import Path = Phaser.Curves.Path;
 import PathFollower = Phaser.GameObjects.PathFollower;
 import Vector2 = Phaser.Math.Vector2;
 import List = Phaser.Structs.List;
+import Line = Phaser.Geom.Line;
+import Point = Phaser.Geom.Point;
+import Intersects = Phaser.Geom.Intersects;
 
 
 class PathDebugger {
@@ -36,25 +40,22 @@ class PathDebugger {
 
 		if (this.pathFollower != null) {
 			if (this.pathFollower.isFollowing()) {
-				let current = this.pathFollower.pathVector;
-				current.add(new Vector2(Tile.SIZE/2, Tile.SIZE/2));
+				let point = new Point(this.pathFollower.pathVector.x, this.pathFollower.pathVector.y);
 				let points = this.pathFollower.path.getPoints();
 
-				let shortest;
 				let index = 0;
-				for (let i = 0; i < points.length; i++) {
-					let difference = this.difference(current, points[i]);
-					if (i == 0) shortest = difference;
-					if (difference < shortest) {
+				for (let i = 0; i+1 < points.length; i++) {
+					let line = new Line(points[i].x, points[i].y, points[i+1].x, points[i+1].y);
+					if (Intersects.PointToLineSegment(point, line)) {
 						index = i;
-						shortest = difference;
+						break;
 					}
 				}
 
-				this.graphics.moveTo(current.x, current.y);
+				this.graphics.moveTo(point.x * Tile.SIZE + Tile.SIZE/2, point.y * Tile.SIZE + Tile.SIZE/2);
 				let k = index;
 				while (k < points.length) {
-					this.graphics.lineTo(points[k].x, points[k].y);
+					this.graphics.lineTo(points[k].x * Tile.SIZE + Tile.SIZE/2, points[k].y * Tile.SIZE + Tile.SIZE/2);
 					k++;
 				}
 				this.graphics.strokePath();
