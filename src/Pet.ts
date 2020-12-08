@@ -1,5 +1,6 @@
-import { Tilemaps } from "phaser";
 import { Health } from "./Health";
+import { Room } from "./Room";
+import { PathDebugger } from "./Debug";
 
 import Scene = Phaser.Scene;
 import Sprite = Phaser.GameObjects.Sprite;
@@ -17,6 +18,9 @@ class Pet {
 	private movement: PathFollower;
 	private health: Health;
 	private position: Point;
+	private room: Room;
+
+	private pathDebugger: PathDebugger;
 
 
 	constructor(scene: Phaser.Scene, type: string) {
@@ -37,7 +41,15 @@ class Pet {
 		this.sprite = new Sprite(this.scene, 12, 12, 'pet');
 		this.sprite.play(this.type + '-idle');
 		this.sprite.setOrigin(0, 0);
+		this.sprite.setDepth(2);
 		this.scene.add.existing(this.sprite);
+
+		if (this.type == 'dino') this.pathDebugger = new PathDebugger(this.scene, 0x67b66b);
+		if (this.type == 'bird') this.pathDebugger = new PathDebugger(this.scene, 0xffd300);
+	}
+
+	public setRoom(room: Room) {
+		this.room = room;
 	}
 
 	public setPosition(position: Point) {
@@ -52,7 +64,11 @@ class Pet {
 		return this.sprite;
 	}
 
-	public move(path: Path) {
+	public move(position: Point) {
+		let path = this.room.findPath(this.position, position);
+		this.position = position;
+		this.pathDebugger.setPathFollower(this.movement);
+
 		let speed = 15;
 		this.movement.setPath(path);
 		this.movement.startFollow({
@@ -65,6 +81,7 @@ class Pet {
 
 	public update(time: number, delta: number) {
 		this.movement.pathUpdate();
+		this.pathDebugger.pathFollowerUpdate();
 
 		if (this.movement.isFollowing()) {
 			if (Math.abs(this.movement.angle) == 0) this.sprite.setFlipX(false);

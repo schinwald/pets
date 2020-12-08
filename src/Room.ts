@@ -1,7 +1,7 @@
 import { Pet } from './Pet';
 import { Grid } from './Grid';
 import { RoomConfig, TileConfig } from './Types';
-import { Movement } from './Movement';
+import { PathFinder } from './PathFinder';
 import { GameObjects } from 'phaser';
 
 import Scene = Phaser.Scene;
@@ -10,20 +10,17 @@ import Shader = Phaser.GameObjects.Shader;
 import Point = Phaser.Geom.Point;
 import Rectangle = Phaser.GameObjects.Rectangle;
 import GameObject = Phaser.GameObjects.GameObject;
-import Graphics = Phaser.GameObjects.Graphics;
-import Ellipse = Phaser.GameObjects.Ellipse;
+import Path = Phaser.Curves.Path;
 
 
 
 class Room extends Group {
 
-	private config: RoomConfig;
-	private grid: Grid;
-	private movement: Movement;
-	private pets: Array<Pet>;
+	public grid: Grid;
 
-	private ellipse: Ellipse;
-	private graphics: Graphics;
+	private pathFinder: PathFinder;
+	private config: RoomConfig;
+	private pets: Array<Pet>;
 
 
 	constructor(scene: Scene, config: RoomConfig) {
@@ -37,12 +34,8 @@ class Room extends Group {
 		this.config = config;
 
 		this.grid = new Grid(config.gridConfig);
-		this.movement = new Movement(this.grid);
+		this.pathFinder = new PathFinder(this.grid);
 		this.pets = new Array<Pet>();
-		
-		this.graphics = new Graphics(this.scene);
-		this.graphics.lineStyle(2, 0xffd300);
-		this.ellipse = new Ellipse(this.scene, -100, -100, Tile.SIZE/4, Tile.SIZE/4, 0xffd300);
 	}
 
 
@@ -63,23 +56,14 @@ class Room extends Group {
 				let zone = new Phaser.GameObjects.Zone(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + 12, 24, 24);
 				zone.setInteractive();
 				zone.on('pointerdown', function() {
-					let path = this.movement.findPath(this.pets[0].getPosition(), position);
-					this.graphics.clear();
-					if (path != null) {
-						path.draw(this.graphics);
-						this.ellipse.setPosition(tile.getCoordinates().x, tile.getCoordinates().y + Tile.SIZE/2);
-						this.pets[0].move(path);
-						this.pets[0].setPosition(position);
-					} else {
-						this.ellipse.setPosition(this.pets[0].getPosition().x + Tile.SIZE/2, this.pets[0].getPosition().y + Tile.SIZE);
-					}
+					this.pets[1].move(new Point(i, j));
 				}, this);
 				this.scene.add.existing(zone);
 			}
 		}
 
 		for (let i = 0; i < this.config.gridConfig.dimensions.rows; i++) {
-			if (i < 5) {
+			if (i < 5 && i != 2) {
 				let position = new Point(1, i);
 				let cell = this.grid.getCell(position);
 				let tile = cell.getData();
@@ -90,7 +74,7 @@ class Room extends Group {
 		}
 
 		for (let i = 1; i < this.config.gridConfig.dimensions.rows; i++) {
-			if (i != 7) {
+			if (i != 7 && i != 5) {
 				let position = new Point(3, i);
 				let cell = this.grid.getCell(position);
 				let tile = cell.getData();
@@ -110,16 +94,17 @@ class Room extends Group {
 				tile.setOccupier(rectangle);
 			}
 		}
-
-		this.graphics.setY(12);
-		this.scene.add.existing(this.graphics);
-		this.scene.add.existing(this.ellipse);
 	}
 
 
 	public invite(pet: Pet) {
+		pet.setRoom(this);
 		this.pets.push(pet);
-		this.ellipse.setPosition(this.pets[0].getPosition().x + Tile.SIZE/2, this.pets[0].getPosition().y + Tile.SIZE);
+	}
+
+
+	public findPath(start: Point, end: Point): Path {
+		return this.pathFinder.findPath(start, end);
 	}
 
 
