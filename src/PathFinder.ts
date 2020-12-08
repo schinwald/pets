@@ -66,6 +66,7 @@ class PathFinder {
 					points.addAt(coordinates, 0);
 					current = current.parent;
 				}
+
 				//
 				let first = points.first;
 				let path = new Path(first.x, first.y);

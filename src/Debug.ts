@@ -51,7 +51,6 @@ class PathDebugger {
 					}
 				}
 
-
 				this.graphics.moveTo(current.x, current.y);
 				let k = index;
 				while (k < points.length) {
@@ -60,9 +59,12 @@ class PathDebugger {
 				}
 				this.graphics.strokePath();
 
-				let end = points[k-1];
 				this.graphics.fillCircle(current.x, current.y, Tile.SIZE/8);
-				this.graphics.fillCircle(end.x, end.y, Tile.SIZE/8);
+
+				if (k > 0) {
+					let end = points[k-1];
+					this.graphics.fillCircle(end.x, end.y, Tile.SIZE/8);
+				}
 			}
 		}
 	}

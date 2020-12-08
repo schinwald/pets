@@ -66,6 +66,8 @@ class Pet {
 
 	public move(position: Point) {
 		let path = this.room.findPath(this.position, position);
+		if (path == null || path.getLength() == 0) return;
+
 		this.position = position;
 		this.pathDebugger.setPathFollower(this.movement);
 

@@ -55,8 +55,12 @@ class Room extends Group {
 				this.grid.setCell(position, tile);
 				let zone = new Phaser.GameObjects.Zone(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + 12, 24, 24);
 				zone.setInteractive();
-				zone.on('pointerdown', function() {
-					this.pets[1].move(new Point(i, j));
+				zone.on('pointerdown', function(pointer) {
+					if (pointer.leftButtonDown()) {
+						this.pets[0].move(new Point(i, j));
+					} else if (pointer.rightButtonDown()) {
+						this.pets[1].move(new Point(i, j));
+					}
 				}, this);
 				this.scene.add.existing(zone);
 			}
