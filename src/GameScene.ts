@@ -75,8 +75,10 @@ class GameScene extends Scene {
 		let pet = new Pet(this, 'bird');
 		this.room.invite(pet);
 
-		pet = new Pet(this, 'dino');
-		this.room.invite(pet);
+		for (let i = 0; i < 10; i++) {
+			pet = new Pet(this, 'dino');
+			this.room.invite(pet);
+		}
 	}
 
 

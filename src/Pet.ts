@@ -1,6 +1,7 @@
 import { Health } from "./Health";
 import { Room, Tile } from "./Room";
 import { PathDebugger } from "./Debug";
+import { GameObjects } from 'phaser';
 
 import Scene = Phaser.Scene;
 import Sprite = Phaser.GameObjects.Sprite;
@@ -12,26 +13,27 @@ import Map = Phaser.Structs.Map;
 import Graphics = Phaser.GameObjects.Graphics;
 import Line = Phaser.Curves.Line;
 import Vector2 = Phaser.Math.Vector2;
+import GameObject = Phaser.GameObjects.GameObject;
 
 
 
-class Pet {
-	private scene: Scene;
-	private type: string;
+class Pet extends GameObject {
+	
 	private sprite: Sprite;
 	private shadow: Ellipse;
 	private movement: PathFollower;
 	private health: Health;
 	private position: Point;
+	private target: Point;
 	private room: Room;
+	private urges: Map<string, number>;
 
 	private graphics: Graphics;
 	private pathDebugger: PathDebugger;
 
 
 	constructor(scene: Phaser.Scene, type: string) {
-		this.scene = scene;
-		this.type = type;
+		super(scene, type);
 		this.init();
 		this.create();
 	}
@@ -40,6 +42,8 @@ class Pet {
 	public init() {
 		this.position = new Point(0, 0);
 		this.movement = new PathFollower(this.scene, null, 0, 0, null);
+		this.urges = new Map<string, number>(null);
+		this.urges.set('walk', 0);
 	}
 
 
@@ -76,8 +80,9 @@ class Pet {
 		return this.sprite;
 	}
 
-	public move(position: Point) {
-		let path = this.room.findPath(this.position, position);
+	public move(target: Point) {
+		this.target = target;
+		let path = this.room.findPath(this.position, this.target);
 		if (path == null || path.curves.length == 0) return;
 
 		let adjustedPath = new Path();
@@ -105,7 +110,7 @@ class Pet {
 		let speed = 15;
 		this.movement.setPath(adjustedPath);
 		this.movement.startFollow({
-			duration: 1000 * path.getLength() * Tile.SIZE / speed,
+			duration: 1000 * adjustedPath.getLength() * Tile.SIZE / speed,
 			from: 0,
 			to: 1,
 			rotateToPath: true
@@ -134,15 +139,27 @@ class Pet {
 				this.position.setTo(Math.floor(point.x), Math.floor(point.y));
 			}
 
-
 			if (this.sprite.anims.getCurrentKey() != this.type + '-walk') {
 				this.sprite.play(this.type + '-walk');
+				this.urges.set('walk', 0);
 			}
 
 			this.graphics.fillRect(this.position.x * Tile.SIZE + Tile.SIZE/4, this.position.y * Tile.SIZE + 3*Tile.SIZE/4, Tile.SIZE/2, Tile.SIZE/2);
 		} else {
 			if (this.sprite.anims.getCurrentKey() != this.type + '-idle') {
 				this.sprite.play(this.type + '-idle');
+			}
+
+			let cell, tile;
+			let columns = this.room.grid.getDimensions().columns;
+			let rows = this.room.grid.getDimensions().rows;
+			let random = new Point(Math.floor(Math.random() * columns), Math.floor(Math.random() * columns));
+
+			this.urges.set('walk', this.urges.get('walk') + Math.random());
+			if (this.urges.get('walk') > 100) {
+				cell = this.room.grid.getCell(random);
+				tile = cell.getData() as Tile;
+				this.move(random);
 			}
 		}
 

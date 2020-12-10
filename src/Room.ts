@@ -75,6 +75,7 @@ class Room extends Group {
 				let rectangle = new Rectangle(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + Tile.SIZE/2, Tile.SIZE, Tile.SIZE, 0x000000);
 				this.scene.add.existing(rectangle);
 				tile.setGameObject(rectangle);
+				tile.setBlocked(true);
 			}
 		}
 
@@ -86,6 +87,7 @@ class Room extends Group {
 				let rectangle = new Rectangle(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + Tile.SIZE/2, Tile.SIZE, Tile.SIZE, 0x000000);
 				this.scene.add.existing(rectangle);
 				tile.setGameObject(rectangle);
+				tile.setBlocked(true);
 			}
 		}
 
@@ -97,6 +99,7 @@ class Room extends Group {
 				let rectangle = new Rectangle(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + Tile.SIZE/2, Tile.SIZE, Tile.SIZE, 0x000000);
 				this.scene.add.existing(rectangle);
 				tile.setGameObject(rectangle);
+				tile.setBlocked(true);
 			}
 		}
 	}

@@ -126,7 +126,7 @@ class PathFinder {
 			// check if positions are valid and add them to node children
 			if (cell != null) {
 				let data = cell.getData();
-				if (data.getGameObject() == null) {
+				if (!data.isBlocked()) {
 					successors.push(new Node(parent, cell));
 				}
 			}
