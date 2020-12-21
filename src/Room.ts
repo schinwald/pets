@@ -26,7 +26,6 @@ class Room extends Group {
 	constructor(scene: Scene, config: RoomConfig) {
 		super(scene);
 		this.configure(config);
-		this.create();
 	}
 
 
@@ -43,6 +42,7 @@ class Room extends Group {
 		let width = this.config.gridConfig.dimensions.columns * Tile.SIZE;
 		let height = this.config.gridConfig.dimensions.rows * Tile.SIZE;
 		let background = new Shader(this.scene, 'ground', width/2, height/2 + Tile.SIZE/2, width, height);
+		background.setDepth(-10);
 		this.scene.add.existing(background);
 
 		for(let i = 0; i < this.config.gridConfig.dimensions.rows; i++) {
