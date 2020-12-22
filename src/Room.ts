@@ -54,7 +54,7 @@ class Room extends Group {
 					blocked: false
 				});
 				this.grid.setCell(position, tile);
-				let zone = new Phaser.GameObjects.Zone(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + 12, 24, 24);
+				let zone = new Phaser.GameObjects.Zone(this.scene, tile.getCoordinates().x, tile.getCoordinates().y + Tile.SIZE/2, Tile.SIZE, Tile.SIZE);
 				zone.setInteractive();
 				zone.on('pointerdown', function(pointer) {
 					if (pointer.leftButtonDown()) {
@@ -125,7 +125,7 @@ class Room extends Group {
 
 class Tile {
 
-	public static readonly SIZE: number = 24;
+	public static readonly SIZE: number = 16;
 	private config: TileConfig;
 
 

@@ -5,9 +5,9 @@ import { GameScene } from "./GameScene";
 
 
 const config = {
-    width: 540,
-    height: 540,
-	zoom: 2,
+    width: 508,
+    height: 508,
+	zoom: 4,
     type: Phaser.AUTO,
     parent: 'content',
 	scene: [GameScene],

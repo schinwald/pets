@@ -24,43 +24,43 @@ class GameScene extends Scene {
 
 	public create() {
 		this.anims.create({
-			key: 'dino-idle',
-			frames: this.anims.generateFrameNames('pets', { prefix: 'pet/dino/idle/', start: 0, end: 3, zeroPad: 1 }),
+			key: 'dinosaur-idle',
+			frames: this.anims.generateFrameNames('pets', { prefix: 'dinosaur-idle-', start: 0, end: 3, zeroPad: 2 }),
 			frameRate: 4,
 			repeat: -1
 		});
 
 		this.anims.create({
-			key: 'dino-walk',
-			frames: this.anims.generateFrameNames('pets', { prefix: 'pet/dino/walk/', start:0, end: 5, zeroPad: 1 }),
+			key: 'dinosaur-walk',
+			frames: this.anims.generateFrameNames('pets', { prefix: 'dinosaur-walk-', start:0, end: 5, zeroPad: 2 }),
 			frameRate: 8,
 			repeat: -1
 		});
 
 		this.anims.create({
-			key: 'dino-sleep',
-			frames: this.anims.generateFrameNames('pets', { prefix: 'pet/dino/sleep/', start: 0, end: 3, zeroPad: 1 }),
+			key: 'dinosaur-sleep',
+			frames: this.anims.generateFrameNames('pets', { prefix: 'dinosaur-sleep-', start: 0, end: 3, zeroPad: 2 }),
 			frameRate: 4,
 			repeat: -1
 		});
 
 		this.anims.create({
 			key: 'bird-idle',
-			frames: this.anims.generateFrameNames('pets', { prefix: 'pet/bird/idle/', start: 0, end: 3, zeroPad: 1 }),
+			frames: this.anims.generateFrameNames('pets', { prefix: 'bird-idle-', start: 0, end: 3, zeroPad: 2 }),
 			frameRate: 4,
 			repeat: -1
 		});
 
 		this.anims.create({
 			key: 'bird-walk',
-			frames: this.anims.generateFrameNames('pets', { prefix: 'pet/bird/walk/', start:0, end: 5, zeroPad: 1 }),
+			frames: this.anims.generateFrameNames('pets', { prefix: 'bird-walk-', start:0, end: 5, zeroPad: 2 }),
 			frameRate: 8,
 			repeat: -1
 		});
 
 		this.anims.create({
 			key: 'bird-sleep',
-			frames: this.anims.generateFrameNames('pets', { prefix: 'pet/bird/sleep/', start: 0, end: 3, zeroPad: 1 }),
+			frames: this.anims.generateFrameNames('pets', { prefix: 'bird-sleep-', start: 0, end: 3, zeroPad: 2 }),
 			frameRate: 4,
 			repeat: -1
 		});
@@ -73,11 +73,11 @@ class GameScene extends Scene {
 
 		this.room.create();
 
-		for (let i = 0; i < 10; i++) {
+		for (let i = 0; i < 2; i++) {
 			let random = Math.random();
 
 			if (random >= 0.50) {
-				this.room.invite(new Pet(this, 'dino'));
+				this.room.invite(new Pet(this, 'dinosaur'));
 			} else {
 				this.room.invite(new Pet(this, 'bird'));
 			}

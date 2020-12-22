@@ -19,7 +19,7 @@ void main() {
 	vec3 color1 = vec3(1.0, 0.0, 0.0);
 	vec3 color2 = vec3(0.0, 1.0, 1.0);
 
-	float cell = 24.0;
+	float cell = 16.0;
 	float stepX = floor((fragCoord.x) / cell);
 	float stepY = floor((fragCoord.y) / cell);
 	vec4 color;

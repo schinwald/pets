@@ -55,16 +55,16 @@ class Pet extends GameObject {
 
 		this.sprite = new Sprite(this.scene, this.position.x, this.position.y, 'pet');
 		this.sprite.play({key: this.type + '-idle', startFrame: 0});
-		this.sprite.setOrigin(0.5, 1);
+		this.sprite.setDisplayOrigin(16, 32);
 		this.scene.add.existing(this.sprite);
 
-		this.shadow = new Ellipse(this.scene, this.position.x, this.position.y, Tile.SIZE/4, 0x000000, 0.15);
+		this.shadow = new Ellipse(this.scene, this.position.x, this.position.y, 3*Tile.SIZE/4, 3*Tile.SIZE/8, 0x000000, 0.15);
 		this.shadow.setOrigin(0.5, 0.5);
 		this.scene.add.existing(this.shadow);
 
 		this.debugger = new Debugger(this.scene);
 		this.debugger.setMovement(this.movement)
-		if (this.type == "dino") this.debugger.setColor(0x67b66b);
+		if (this.type == "dinosaur") this.debugger.setColor(0x67b66b);
 		if (this.type == "bird") this.debugger.setColor(0xffd300);
 	}
 

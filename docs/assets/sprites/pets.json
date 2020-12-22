@@ -4,595 +4,595 @@
 			"image": "pets.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 742,
-				"h": 28
+				"w": 18,
+				"h": 490
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "pet/bird/walk/0",
+					"filename": "bird-idle-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 0,
-						"y": 4,
-						"w": 21,
-						"h": 20
-					},
-					"frame": {
-						"x": 4,
-						"y": 4,
-						"w": 21,
-						"h": 20
-					}
-				},
-				{
-					"filename": "pet/bird/walk/2",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 24,
-						"h": 24
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 4,
-						"w": 21,
-						"h": 20
-					},
-					"frame": {
-						"x": 33,
-						"y": 4,
-						"w": 21,
-						"h": 20
-					}
-				},
-				{
-					"filename": "pet/bird/walk/3",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 24,
-						"h": 24
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 4,
-						"w": 21,
-						"h": 20
-					},
-					"frame": {
-						"x": 62,
-						"y": 4,
-						"w": 21,
-						"h": 20
-					}
-				},
-				{
-					"filename": "pet/bird/walk/5",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 24,
-						"h": 24
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 4,
-						"w": 21,
-						"h": 20
-					},
-					"frame": {
-						"x": 91,
-						"y": 4,
-						"w": 21,
-						"h": 20
-					}
-				},
-				{
-					"filename": "pet/bird/idle/0",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 24,
-						"h": 24
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 5,
-						"w": 21,
+						"x": 6,
+						"y": 13,
+						"w": 18,
 						"h": 19
 					},
 					"frame": {
-						"x": 120,
-						"y": 4,
-						"w": 21,
+						"x": 0,
+						"y": 0,
+						"w": 18,
 						"h": 19
 					}
 				},
 				{
-					"filename": "pet/bird/idle/1",
+					"filename": "bird-idle-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 0,
-						"y": 5,
-						"w": 21,
+						"x": 6,
+						"y": 13,
+						"w": 18,
 						"h": 19
 					},
 					"frame": {
-						"x": 149,
-						"y": 4,
-						"w": 21,
+						"x": 0,
+						"y": 19,
+						"w": 18,
 						"h": 19
 					}
 				},
 				{
-					"filename": "pet/bird/sleep/0",
+					"filename": "bird-sleep-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 0,
-						"y": 5,
-						"w": 21,
+						"x": 6,
+						"y": 13,
+						"w": 18,
 						"h": 19
 					},
 					"frame": {
-						"x": 178,
-						"y": 4,
-						"w": 21,
+						"x": 0,
+						"y": 38,
+						"w": 18,
 						"h": 19
 					}
 				},
 				{
-					"filename": "pet/bird/sleep/1",
+					"filename": "bird-sleep-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 0,
-						"y": 5,
-						"w": 21,
+						"x": 6,
+						"y": 13,
+						"w": 18,
 						"h": 19
 					},
 					"frame": {
-						"x": 207,
-						"y": 4,
-						"w": 21,
+						"x": 0,
+						"y": 57,
+						"w": 18,
 						"h": 19
 					}
 				},
 				{
-					"filename": "pet/bird/walk/1",
+					"filename": "bird-walk-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 0,
-						"y": 5,
-						"w": 21,
+						"x": 6,
+						"y": 13,
+						"w": 18,
 						"h": 19
 					},
 					"frame": {
-						"x": 236,
-						"y": 4,
-						"w": 21,
+						"x": 0,
+						"y": 76,
+						"w": 18,
 						"h": 19
 					}
 				},
 				{
-					"filename": "pet/bird/walk/4",
+					"filename": "bird-walk-05",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 0,
-						"y": 5,
-						"w": 21,
+						"x": 6,
+						"y": 13,
+						"w": 18,
 						"h": 19
 					},
 					"frame": {
-						"x": 265,
-						"y": 4,
-						"w": 21,
+						"x": 0,
+						"y": 95,
+						"w": 18,
 						"h": 19
 					}
 				},
 				{
-					"filename": "pet/bird/idle/2",
+					"filename": "bird-idle-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 0,
-						"y": 6,
-						"w": 21,
+						"x": 6,
+						"y": 14,
+						"w": 18,
 						"h": 18
 					},
 					"frame": {
-						"x": 294,
-						"y": 4,
-						"w": 21,
+						"x": 0,
+						"y": 114,
+						"w": 18,
 						"h": 18
 					}
 				},
 				{
-					"filename": "pet/bird/idle/3",
+					"filename": "bird-idle-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
 						"x": 0,
-						"y": 6,
-						"w": 21,
-						"h": 18
-					},
-					"frame": {
-						"x": 323,
-						"y": 4,
-						"w": 21,
+						"y": 132,
+						"w": 18,
 						"h": 18
 					}
 				},
 				{
-					"filename": "pet/bird/sleep/2",
+					"filename": "bird-sleep-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
 						"x": 0,
-						"y": 6,
-						"w": 21,
-						"h": 18
-					},
-					"frame": {
-						"x": 352,
-						"y": 4,
-						"w": 21,
+						"y": 150,
+						"w": 18,
 						"h": 18
 					}
 				},
 				{
-					"filename": "pet/bird/sleep/3",
+					"filename": "bird-sleep-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
 						"x": 0,
-						"y": 6,
-						"w": 21,
-						"h": 18
-					},
-					"frame": {
-						"x": 381,
-						"y": 4,
-						"w": 21,
+						"y": 168,
+						"w": 18,
 						"h": 18
 					}
 				},
 				{
-					"filename": "pet/dino/idle/0",
+					"filename": "bird-walk-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 186,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-walk-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 204,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-walk-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 222,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-walk-04",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 240,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "dinosaur-idle-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
 						"w": 16,
 						"h": 17
 					},
 					"frame": {
-						"x": 410,
-						"y": 4,
+						"x": 0,
+						"y": 258,
 						"w": 16,
 						"h": 17
 					}
 				},
 				{
-					"filename": "pet/dino/idle/1",
+					"filename": "dinosaur-idle-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 8,
+						"y": 15,
 						"w": 16,
 						"h": 17
 					},
 					"frame": {
-						"x": 434,
-						"y": 4,
+						"x": 0,
+						"y": 275,
 						"w": 16,
 						"h": 17
 					}
 				},
 				{
-					"filename": "pet/dino/idle/3",
+					"filename": "dinosaur-idle-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 8,
+						"y": 15,
 						"w": 16,
 						"h": 17
 					},
 					"frame": {
-						"x": 458,
-						"y": 4,
+						"x": 0,
+						"y": 292,
 						"w": 16,
 						"h": 17
 					}
 				},
 				{
-					"filename": "pet/dino/sleep/0",
+					"filename": "dinosaur-sleep-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 8,
+						"y": 15,
 						"w": 16,
 						"h": 17
 					},
 					"frame": {
-						"x": 482,
-						"y": 4,
+						"x": 0,
+						"y": 309,
 						"w": 16,
 						"h": 17
 					}
 				},
 				{
-					"filename": "pet/dino/sleep/1",
+					"filename": "dinosaur-sleep-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 8,
+						"y": 15,
 						"w": 16,
 						"h": 17
 					},
 					"frame": {
-						"x": 506,
-						"y": 4,
+						"x": 0,
+						"y": 326,
 						"w": 16,
 						"h": 17
 					}
 				},
 				{
-					"filename": "pet/dino/sleep/3",
+					"filename": "dinosaur-sleep-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 8,
+						"y": 15,
 						"w": 16,
 						"h": 17
 					},
 					"frame": {
-						"x": 530,
-						"y": 4,
+						"x": 0,
+						"y": 343,
 						"w": 16,
 						"h": 17
 					}
 				},
 				{
-					"filename": "pet/dino/walk/2",
+					"filename": "dinosaur-walk-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 8,
+						"y": 15,
 						"w": 16,
 						"h": 17
 					},
 					"frame": {
-						"x": 554,
-						"y": 4,
+						"x": 0,
+						"y": 360,
 						"w": 16,
 						"h": 17
 					}
 				},
 				{
-					"filename": "pet/dino/walk/5",
+					"filename": "dinosaur-walk-05",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 8,
+						"y": 15,
 						"w": 16,
 						"h": 17
 					},
 					"frame": {
-						"x": 578,
-						"y": 4,
+						"x": 0,
+						"y": 377,
 						"w": 16,
 						"h": 17
 					}
 				},
 				{
-					"filename": "pet/dino/idle/2",
+					"filename": "dinosaur-idle-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 8,
+						"x": 8,
+						"y": 16,
 						"w": 16,
 						"h": 16
 					},
 					"frame": {
-						"x": 602,
-						"y": 4,
+						"x": 0,
+						"y": 394,
 						"w": 16,
 						"h": 16
 					}
 				},
 				{
-					"filename": "pet/dino/sleep/2",
+					"filename": "dinosaur-sleep-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 8,
+						"x": 8,
+						"y": 16,
 						"w": 16,
 						"h": 16
 					},
 					"frame": {
-						"x": 626,
-						"y": 4,
+						"x": 0,
+						"y": 410,
 						"w": 16,
 						"h": 16
 					}
 				},
 				{
-					"filename": "pet/dino/walk/0",
+					"filename": "dinosaur-walk-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 8,
+						"y": 16,
 						"w": 16,
 						"h": 16
 					},
 					"frame": {
-						"x": 650,
-						"y": 4,
+						"x": 0,
+						"y": 426,
 						"w": 16,
 						"h": 16
 					}
 				},
 				{
-					"filename": "pet/dino/walk/1",
+					"filename": "dinosaur-walk-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 8,
+						"x": 8,
+						"y": 16,
 						"w": 16,
 						"h": 16
 					},
 					"frame": {
-						"x": 674,
-						"y": 4,
+						"x": 0,
+						"y": 442,
 						"w": 16,
 						"h": 16
 					}
 				},
 				{
-					"filename": "pet/dino/walk/3",
+					"filename": "dinosaur-walk-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 7,
+						"x": 8,
+						"y": 16,
 						"w": 16,
 						"h": 16
 					},
 					"frame": {
-						"x": 698,
-						"y": 4,
+						"x": 0,
+						"y": 458,
 						"w": 16,
 						"h": 16
 					}
 				},
 				{
-					"filename": "pet/dino/walk/4",
+					"filename": "dinosaur-walk-04",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 24,
-						"h": 24
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 4,
-						"y": 8,
+						"x": 8,
+						"y": 16,
 						"w": 16,
 						"h": 16
 					},
 					"frame": {
-						"x": 722,
-						"y": 4,
+						"x": 0,
+						"y": 474,
 						"w": 16,
 						"h": 16
 					}
