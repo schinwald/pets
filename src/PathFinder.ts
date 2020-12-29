@@ -38,7 +38,7 @@ class PathFinder {
 	public findPath(start: Point, end: Point): Path {
 		let data = this.grid.getCell(start);
 		let root = new Node(null, data);
-		root.heuristic = this.calculateHeuristic(start, end);
+		root.heuristic = this.calculateDistance(start, end);
 		root.cost = 0;
 		root.function = root.heuristic + root.cost;
 
@@ -85,7 +85,7 @@ class PathFinder {
 				let position = cell.getPosition();
 				let key = "(" + position.x + "," + position.y + ")";
 
-				successor.heuristic = this.calculateHeuristic(position, end);
+				successor.heuristic = this.calculateDistance(position, end);
 				successor.cost = current.cost + 1;
 				successor.function = successor.heuristic + successor.cost;
 				
@@ -168,7 +168,7 @@ class PathFinder {
 	}
 
 
-	private calculateHeuristic(a: Point, b: Point): number {
+	public calculateDistance(a: Point, b: Point): number {
 		let row = Math.abs(a.y - b.y);
 		let column = Math.abs(a.x - b.x);
 		return row + column;

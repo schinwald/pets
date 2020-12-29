@@ -1,0 +1,187 @@
+{
+	"textures": [
+		{
+			"image": "emotes.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 87,
+				"h": 16
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "emotes-happy-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 1,
+						"w": 18,
+						"h": 16
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 16
+					}
+				},
+				{
+					"filename": "emotes-hungry-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 17,
+						"h": 16
+					},
+					"frame": {
+						"x": 18,
+						"y": 0,
+						"w": 17,
+						"h": 16
+					}
+				},
+				{
+					"filename": "emotes-happy-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 35,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "emotes-hungry-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 51,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "emotes-happy-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 1,
+						"w": 8,
+						"h": 14
+					},
+					"frame": {
+						"x": 67,
+						"y": 0,
+						"w": 8,
+						"h": 14
+					}
+				},
+				{
+					"filename": "emotes-hungry-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 1,
+						"w": 8,
+						"h": 14
+					},
+					"frame": {
+						"x": 75,
+						"y": 0,
+						"w": 8,
+						"h": 14
+					}
+				},
+				{
+					"filename": "emotes-happy-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 6,
+						"w": 2,
+						"h": 10
+					},
+					"frame": {
+						"x": 83,
+						"y": 0,
+						"w": 2,
+						"h": 10
+					}
+				},
+				{
+					"filename": "emotes-hungry-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 6,
+						"w": 2,
+						"h": 10
+					},
+					"frame": {
+						"x": 85,
+						"y": 0,
+						"w": 2,
+						"h": 10
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.6"
+	}
+}

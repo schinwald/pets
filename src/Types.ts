@@ -12,6 +12,7 @@ type RoomConfig = {
 
 
 type TileConfig = {
+	position: Point;
 	coordinate: Point;
 	gameObject: GameObject;
 	blocked: boolean;

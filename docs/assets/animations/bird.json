@@ -1,0 +1,119 @@
+{
+	"anims": [
+		{
+			"key": "bird-idle",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "pets",
+					"frame": "bird-idle-00",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "bird-idle-01",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "bird-idle-02",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "bird-idle-03",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": -1,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		},
+		{
+			"key": "bird-walk",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "pets",
+					"frame": "bird-walk-00",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "bird-walk-01",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "bird-walk-02",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "bird-walk-03",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "bird-walk-04",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "bird-walk-05",
+					"duration": 0
+				}
+			],
+			"frameRate": 8,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": -1,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		},
+		{
+			"key": "bird-sleep",
+			"type": "frame",
+			"frames": [
+				{
+				"key": "pets",
+				"frame": "bird-sleep-00",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "bird-sleep-01",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "bird-sleep-02",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "bird-sleep-03",
+				"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": -1,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		}
+	]
+}

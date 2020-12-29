@@ -1,0 +1,74 @@
+{
+	"anims": [
+		{
+			"key": "emote-hungry",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "emotes",
+					"frame": "emotes-hungry-00",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emotes-hungry-01",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emotes-hungry-02",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emotes-hungry-03",
+					"duration": 0
+				}
+			],
+			"frameRate": 1,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		},
+		{
+			"key": "emote-happy",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "emotes",
+					"frame": "emotes-happy-00",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emotes-happy-01",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emotes-happy-02",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emotes-happy-03",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		}
+	]
+}

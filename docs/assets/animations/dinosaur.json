@@ -1,0 +1,119 @@
+{
+	"anims": [
+		{
+			"key": "dinosaur-idle",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "pets",
+					"frame": "dinosaur-idle-00",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "dinosaur-idle-01",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "dinosaur-idle-02",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "dinosaur-idle-03",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": -1,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		},
+		{
+			"key": "dinosaur-walk",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "pets",
+					"frame": "dinosaur-walk-00",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "dinosaur-walk-01",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "dinosaur-walk-02",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "dinosaur-walk-03",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "dinosaur-walk-04",
+					"duration": 0
+				},
+				{
+					"key": "pets",
+					"frame": "dinosaur-walk-05",
+					"duration": 0
+				}
+			],
+			"frameRate": 8,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": -1,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		},
+		{
+			"key": "dinosaur-sleep",
+			"type": "frame",
+			"frames": [
+				{
+				"key": "pets",
+				"frame": "dinosaur-sleep-00",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "dinosaur-sleep-01",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "dinosaur-sleep-02",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "dinosaur-sleep-03",
+				"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": -1,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		}
+	]
+}

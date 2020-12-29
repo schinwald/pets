@@ -5,21 +5,20 @@ import { GameScene } from "./GameScene";
 
 
 const config = {
-    width: 508,
-    height: 508,
-	zoom: 4,
     type: Phaser.AUTO,
-    parent: 'content',
-	scene: [GameScene],
+	disableContextMenu: true,
 	scale: {
-		// mode: Phaser.Scale.FIT,
-		// autoCentre: Phaser.Scale.CENTER_BOTH
+		mode: Phaser.Scale.FIT,
+		autoCentre: Phaser.Scale.CENTER_BOTH,
+		parent: 'phaser-game',
+		width: 128,
+		height: 128,
 	},
 	render: {
 		transparent: true,
 		pixelArt: true
 	},
-	disableContextMenu: true,
+	scene: [GameScene]
 };
 
 new Phaser.Game(config);

@@ -1,0 +1,82 @@
+{
+	"textures": [
+		{
+			"image": "objects.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 42,
+				"h": 11
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "food-full",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 23,
+						"w": 14,
+						"h": 11
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 11
+					}
+				},
+				{
+					"filename": "food-half",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 25,
+						"w": 14,
+						"h": 9
+					},
+					"frame": {
+						"x": 14,
+						"y": 0,
+						"w": 14,
+						"h": 9
+					}
+				},
+				{
+					"filename": "food-empty",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 26,
+						"w": 14,
+						"h": 8
+					},
+					"frame": {
+						"x": 28,
+						"y": 0,
+						"w": 14,
+						"h": 8
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.6"
+	}
+}
