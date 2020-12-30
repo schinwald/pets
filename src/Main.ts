@@ -13,6 +13,10 @@ const config = {
 		parent: 'phaser-game',
 		width: 128,
 		height: 128,
+		max: {
+			width: 512,
+			height: 512
+		}
 	},
 	render: {
 		transparent: true,

@@ -29,6 +29,9 @@ class GameScene extends Scene {
 
 
 	public create() {
+		this.input.setDefaultCursor('url(./assets/cursors/pointer.png) 32 64, pointer')
+
+
 		this.room = new Room(this, {
 			gridConfig: {
 				dimensions: new Dimensions(5, 5)

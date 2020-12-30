@@ -10,6 +10,8 @@ import Sprite = Phaser.GameObjects.Sprite;
 import Point = Phaser.Geom.Point;
 import Ellipse = Phaser.GameObjects.Ellipse;
 import GameObject = Phaser.GameObjects.GameObject;
+import Rectangle = Phaser.Geom.Rectangle;
+import HitAreaCallback = Phaser.Types.Input.HitAreaCallback;
 
 
 
@@ -73,6 +75,16 @@ class Pet extends GameObject {
 		this.scene.add.existing(this.shadow);
 		// if (this.type == "dinosaur") this.debugger.setColor(0x67b66b);
 		// if (this.type == "bird") this.debugger.setColor(0xffd300);
+
+		this.sprite.setInteractive({
+			cursor: 'url(./assets/cursors/grab.png) 32 64, grab',
+			hitArea: new Rectangle(5*Tile.SIZE/8, Tile.SIZE, 3*Tile.SIZE/4, Tile.SIZE),
+			hitAreaCallback: Rectangle.Contains
+		});
+
+		this.sprite.on('pointerdown', (pointer) => {
+			
+		})
 	}
 
 
