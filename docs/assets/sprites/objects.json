@@ -1,16 +1,16 @@
 {
 	"textures": [
 		{
-			"image": "objects.png",
+			"image": "",
 			"format": "RGBA8888",
 			"size": {
-				"w": 42,
-				"h": 11
+				"w": 56,
+				"h": 49
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "food-full",
+					"filename": "object-poop-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -18,20 +18,20 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 9,
-						"y": 23,
-						"w": 14,
-						"h": 11
+						"x": 10,
+						"y": 24,
+						"w": 15,
+						"h": 12
 					},
 					"frame": {
 						"x": 0,
 						"y": 0,
-						"w": 14,
-						"h": 11
+						"w": 15,
+						"h": 12
 					}
 				},
 				{
-					"filename": "food-half",
+					"filename": "object-poop-04",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -41,18 +41,39 @@
 					"spriteSourceSize": {
 						"x": 9,
 						"y": 25,
-						"w": 14,
-						"h": 9
+						"w": 15,
+						"h": 12
 					},
 					"frame": {
-						"x": 14,
+						"x": 15,
 						"y": 0,
-						"w": 14,
-						"h": 9
+						"w": 15,
+						"h": 12
 					}
 				},
 				{
-					"filename": "food-empty",
+					"filename": "object-poop-05",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 24,
+						"w": 15,
+						"h": 12
+					},
+					"frame": {
+						"x": 0,
+						"y": 12,
+						"w": 15,
+						"h": 12
+					}
+				},
+				{
+					"filename": "object-food-empty",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -66,17 +87,248 @@
 						"h": 8
 					},
 					"frame": {
-						"x": 28,
-						"y": 0,
+						"x": 15,
+						"y": 12,
 						"w": 14,
 						"h": 8
+					}
+				},
+				{
+					"filename": "object-food-full",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 23,
+						"w": 14,
+						"h": 11
+					},
+					"frame": {
+						"x": 30,
+						"y": 0,
+						"w": 14,
+						"h": 11
+					}
+				},
+				{
+					"filename": "object-food-half",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 25,
+						"w": 14,
+						"h": 9
+					},
+					"frame": {
+						"x": 30,
+						"y": 11,
+						"w": 14,
+						"h": 9
+					}
+				},
+				{
+					"filename": "object-poop-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 25,
+						"w": 14,
+						"h": 11
+					},
+					"frame": {
+						"x": 0,
+						"y": 24,
+						"w": 14,
+						"h": 11
+					}
+				},
+				{
+					"filename": "object-poop-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 23,
+						"w": 14,
+						"h": 13
+					},
+					"frame": {
+						"x": 14,
+						"y": 24,
+						"w": 14,
+						"h": 13
+					}
+				},
+				{
+					"filename": "object-poop-06",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 23,
+						"w": 14,
+						"h": 14
+					},
+					"frame": {
+						"x": 28,
+						"y": 20,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "object-poop-07",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 24,
+						"w": 12,
+						"h": 14
+					},
+					"frame": {
+						"x": 44,
+						"y": 0,
+						"w": 12,
+						"h": 14
+					}
+				},
+				{
+					"filename": "object-poop-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 24,
+						"w": 13,
+						"h": 13
+					},
+					"frame": {
+						"x": 0,
+						"y": 35,
+						"w": 13,
+						"h": 13
+					}
+				},
+				{
+					"filename": "object-poop-08",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 25,
+						"w": 13,
+						"h": 12
+					},
+					"frame": {
+						"x": 42,
+						"y": 20,
+						"w": 13,
+						"h": 12
+					}
+				},
+				{
+					"filename": "object-poop-10",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 23,
+						"w": 12,
+						"h": 13
+					},
+					"frame": {
+						"x": 42,
+						"y": 32,
+						"w": 12,
+						"h": 13
+					}
+				},
+				{
+					"filename": "object-poop-09",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 24,
+						"w": 12,
+						"h": 12
+					},
+					"frame": {
+						"x": 28,
+						"y": 34,
+						"w": 12,
+						"h": 12
+					}
+				},
+				{
+					"filename": "object-poop-11",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 24,
+						"w": 12,
+						"h": 12
+					},
+					"frame": {
+						"x": 13,
+						"y": 37,
+						"w": 12,
+						"h": 12
 					}
 				}
 			]
 		}
 	],
 	"meta": {
-		"app": "http://free-tex-packer.com",
-		"version": "0.6.6"
+		"app": "http://github.com/odrick/free-tex-packer-cli",
+		"version": "0.2.8"
 	}
 }

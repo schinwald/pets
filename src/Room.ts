@@ -3,6 +3,7 @@ import { RoomConfig, TileConfig } from './Types';
 import { PathFinder } from './PathFinder';
 import { Food } from './objects/Food';
 import { Pet } from './entities/pet/Pet';
+import { GameObjects } from 'phaser';
 
 import Scene = Phaser.Scene;
 import Group = Phaser.GameObjects.Group;
@@ -10,10 +11,11 @@ import Shader = Phaser.GameObjects.Shader;
 import Point = Phaser.Geom.Point;
 import GameObject = Phaser.GameObjects.GameObject;
 import Path = Phaser.Curves.Path;
+import { Progress } from './Progress';
 
 
 
-class Room extends Group {
+export class Room extends Group {
 
 	public grid: Grid;
 
@@ -55,7 +57,7 @@ class Room extends Group {
 			for(let j = 0; j < this.config.gridConfig.dimensions.columns; j++) {
 				// creating the data to be stored in the cell
 				let tile = new Tile({
-					gameObject: null,
+					data: null,
 					position: new Point(i, j),
 					coordinate: new Point(Tile.SIZE * i + Tile.SIZE/2 + background.x - background.width/2, Tile.SIZE * j + Tile.SIZE/2 + background.y - background.height/2),
 					blocked: false
@@ -68,9 +70,8 @@ class Room extends Group {
 		}
 
 		let position = new Point(2, 2);
-		let food = new Food(this.scene, 'food');
+		let food = new Food(this.scene, new Progress(100000, 100000));
 		food.create(this.getTile(position).getCoordinate());
-		food.setValue(100);
 		this.scene.add.existing(food);
 		this.setTile(position, food, true);
 	}
@@ -83,34 +84,36 @@ class Room extends Group {
 	}
 
 
-	public setTile(position: Point, gameObject: GameObject, blocked: boolean) {
+	public setTile(position: Point, data: TileData, blocked: boolean) {
 		let tile = this.getTile(position);
 		let key = null;
 		let tiles = null;
 		let index = null;
 
 		// removes the tile from its corresponding cached tile list
-		if (tile.getGameObject() != null) {
-			key = tile.getGameObject().type;
+		if (tile.getData() != null) {
+			key = tile.getData().type;
 			tiles = this.getTiles(key);
 			index = tiles.indexOf(tile);
 			if (index != -1) {
 				tiles.splice(index, 1);
 			}
+			console.log(index = tiles.indexOf(tile))
 		}
 
 		// update tile information
-		tile.setGameObject(gameObject);
+		tile.setData(data);
 		tile.setBlocked(blocked);
 	
 		// add the tile to its corresponding cached tile list
-		key = tile.getGameObject().type;
+		key = tile.getData().type;
 		tiles = this.getTiles(key);
 		tiles.push(tile);
 	}
 	
 
 	public getTile(position: Point): Tile {
+		if (this.grid.getCell(position) == null) return null;
 		return this.grid.getCell(position).getData();
 	}
 
@@ -137,7 +140,7 @@ class Room extends Group {
 
 
 
-class Tile {
+export class Tile {
 
 	public static readonly SIZE: number = 16;
 	private config: TileConfig;
@@ -153,8 +156,14 @@ class Tile {
 	}
 
 
-	public setGameObject(gameObject: GameObject) {
-		this.config.gameObject = gameObject;
+	public interact(gameObject: GameObject) {
+		let pet = gameObject as Pet;
+		this.config.data.interact(pet);
+	}
+
+
+	public setData(data: TileData) {
+		this.config.data = data;
 		return this;
 	}
 
@@ -169,8 +178,8 @@ class Tile {
 	}
 
 
-	public getGameObject(): GameObject {
-		return this.config.gameObject;
+	public getData(): TileData {
+		return this.config.data;
 	}
 
 
@@ -186,5 +195,7 @@ class Tile {
 
 
 
-export { Room };
-export { Tile };
+export interface TileData {
+	type: string;
+	interact(pet: Pet);
+}

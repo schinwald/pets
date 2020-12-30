@@ -1,5 +1,5 @@
-import { GameObjects } from 'phaser';
 import { Dimensions } from './Grid'
+import { TileData } from './Room';
 
 import Point = Phaser.Geom.Point;
 import GameObject = Phaser.GameObjects.GameObject;
@@ -14,7 +14,7 @@ type RoomConfig = {
 type TileConfig = {
 	position: Point;
 	coordinate: Point;
-	gameObject: GameObject;
+	data: TileData;
 	blocked: boolean;
 }
 

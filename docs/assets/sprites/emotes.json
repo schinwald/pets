@@ -1,16 +1,16 @@
 {
 	"textures": [
 		{
-			"image": "emotes.png",
+			"image": "",
 			"format": "RGBA8888",
 			"size": {
-				"w": 87,
+				"w": 88,
 				"h": 16
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "emotes-happy-03",
+					"filename": "emote-happy-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -31,7 +31,7 @@
 					}
 				},
 				{
-					"filename": "emotes-hungry-03",
+					"filename": "emote-hungry-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -39,20 +39,20 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 8,
+						"x": 7,
 						"y": 1,
-						"w": 17,
+						"w": 18,
 						"h": 16
 					},
 					"frame": {
 						"x": 18,
 						"y": 0,
-						"w": 17,
+						"w": 18,
 						"h": 16
 					}
 				},
 				{
-					"filename": "emotes-happy-02",
+					"filename": "emote-happy-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -66,14 +66,14 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 35,
+						"x": 36,
 						"y": 0,
 						"w": 16,
 						"h": 16
 					}
 				},
 				{
-					"filename": "emotes-hungry-02",
+					"filename": "emote-hungry-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -87,14 +87,14 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 51,
+						"x": 52,
 						"y": 0,
 						"w": 16,
 						"h": 16
 					}
 				},
 				{
-					"filename": "emotes-happy-01",
+					"filename": "emote-happy-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -108,14 +108,14 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 67,
+						"x": 68,
 						"y": 0,
 						"w": 8,
 						"h": 14
 					}
 				},
 				{
-					"filename": "emotes-hungry-01",
+					"filename": "emote-hungry-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -129,14 +129,14 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 75,
+						"x": 76,
 						"y": 0,
 						"w": 8,
 						"h": 14
 					}
 				},
 				{
-					"filename": "emotes-happy-00",
+					"filename": "emote-happy-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -150,14 +150,14 @@
 						"h": 10
 					},
 					"frame": {
-						"x": 83,
+						"x": 84,
 						"y": 0,
 						"w": 2,
 						"h": 10
 					}
 				},
 				{
-					"filename": "emotes-hungry-00",
+					"filename": "emote-hungry-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -171,7 +171,7 @@
 						"h": 10
 					},
 					"frame": {
-						"x": 85,
+						"x": 86,
 						"y": 0,
 						"w": 2,
 						"h": 10
@@ -181,7 +181,7 @@
 		}
 	],
 	"meta": {
-		"app": "http://free-tex-packer.com",
-		"version": "0.6.6"
+		"app": "http://github.com/odrick/free-tex-packer-cli",
+		"version": "0.2.8"
 	}
 }

@@ -1,16 +1,16 @@
 {
 	"textures": [
 		{
-			"image": "pets.png",
+			"image": "",
 			"format": "RGBA8888",
 			"size": {
 				"w": 18,
-				"h": 490
+				"h": 576
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "bird-idle-00",
+					"filename": "bird-eat-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -31,7 +31,7 @@
 					}
 				},
 				{
-					"filename": "bird-idle-03",
+					"filename": "bird-eat-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -52,7 +52,7 @@
 					}
 				},
 				{
-					"filename": "bird-sleep-00",
+					"filename": "bird-idle-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -73,7 +73,7 @@
 					}
 				},
 				{
-					"filename": "bird-sleep-03",
+					"filename": "bird-sleep-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -136,6 +136,573 @@
 					}
 				},
 				{
+					"filename": "bird-eat-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 114,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-eat-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 132,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-idle-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 150,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-sleep-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 168,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-sleep-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 186,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-walk-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 204,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-walk-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 222,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-walk-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 240,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "bird-walk-04",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 258,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "dinosaur-eat-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 14,
+						"w": 16,
+						"h": 18
+					},
+					"frame": {
+						"x": 0,
+						"y": 276,
+						"w": 16,
+						"h": 18
+					}
+				},
+				{
+					"filename": "dinosaur-eat-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 294,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-eat-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 311,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-idle-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 328,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-idle-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 345,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-idle-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 362,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-sleep-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 379,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-sleep-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 396,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-sleep-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 413,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-walk-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 430,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-walk-05",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 0,
+						"y": 447,
+						"w": 16,
+						"h": 17
+					}
+				},
+				{
+					"filename": "dinosaur-eat-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 16,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 0,
+						"y": 464,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "dinosaur-idle-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 16,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 0,
+						"y": 480,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "dinosaur-sleep-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 16,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 0,
+						"y": 496,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "dinosaur-walk-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 16,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 0,
+						"y": 512,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "dinosaur-walk-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 16,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 0,
+						"y": 528,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "dinosaur-walk-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 16,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 0,
+						"y": 544,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
+					"filename": "dinosaur-walk-04",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 16,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 0,
+						"y": 560,
+						"w": 16,
+						"h": 16
+					}
+				},
+				{
 					"filename": "bird-idle-01",
 					"rotated": false,
 					"trimmed": true,
@@ -157,7 +724,7 @@
 					}
 				},
 				{
-					"filename": "bird-idle-02",
+					"filename": "bird-idle-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -166,19 +733,19 @@
 					},
 					"spriteSourceSize": {
 						"x": 6,
-						"y": 14,
+						"y": 13,
 						"w": 18,
-						"h": 18
+						"h": 19
 					},
 					"frame": {
 						"x": 0,
-						"y": 132,
+						"y": 19,
 						"w": 18,
-						"h": 18
+						"h": 19
 					}
 				},
 				{
-					"filename": "bird-sleep-01",
+					"filename": "bird-sleep-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -187,421 +754,22 @@
 					},
 					"spriteSourceSize": {
 						"x": 6,
-						"y": 14,
+						"y": 13,
 						"w": 18,
-						"h": 18
+						"h": 19
 					},
 					"frame": {
 						"x": 0,
-						"y": 150,
+						"y": 57,
 						"w": 18,
-						"h": 18
-					}
-				},
-				{
-					"filename": "bird-sleep-02",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 6,
-						"y": 14,
-						"w": 18,
-						"h": 18
-					},
-					"frame": {
-						"x": 0,
-						"y": 168,
-						"w": 18,
-						"h": 18
-					}
-				},
-				{
-					"filename": "bird-walk-00",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 6,
-						"y": 14,
-						"w": 18,
-						"h": 18
-					},
-					"frame": {
-						"x": 0,
-						"y": 186,
-						"w": 18,
-						"h": 18
-					}
-				},
-				{
-					"filename": "bird-walk-01",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 6,
-						"y": 14,
-						"w": 18,
-						"h": 18
-					},
-					"frame": {
-						"x": 0,
-						"y": 204,
-						"w": 18,
-						"h": 18
-					}
-				},
-				{
-					"filename": "bird-walk-03",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 6,
-						"y": 14,
-						"w": 18,
-						"h": 18
-					},
-					"frame": {
-						"x": 0,
-						"y": 222,
-						"w": 18,
-						"h": 18
-					}
-				},
-				{
-					"filename": "bird-walk-04",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 6,
-						"y": 14,
-						"w": 18,
-						"h": 18
-					},
-					"frame": {
-						"x": 0,
-						"y": 240,
-						"w": 18,
-						"h": 18
-					}
-				},
-				{
-					"filename": "dinosaur-idle-00",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 15,
-						"w": 16,
-						"h": 17
-					},
-					"frame": {
-						"x": 0,
-						"y": 258,
-						"w": 16,
-						"h": 17
-					}
-				},
-				{
-					"filename": "dinosaur-idle-01",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 15,
-						"w": 16,
-						"h": 17
-					},
-					"frame": {
-						"x": 0,
-						"y": 275,
-						"w": 16,
-						"h": 17
-					}
-				},
-				{
-					"filename": "dinosaur-idle-03",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 15,
-						"w": 16,
-						"h": 17
-					},
-					"frame": {
-						"x": 0,
-						"y": 292,
-						"w": 16,
-						"h": 17
-					}
-				},
-				{
-					"filename": "dinosaur-sleep-00",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 15,
-						"w": 16,
-						"h": 17
-					},
-					"frame": {
-						"x": 0,
-						"y": 309,
-						"w": 16,
-						"h": 17
-					}
-				},
-				{
-					"filename": "dinosaur-sleep-01",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 15,
-						"w": 16,
-						"h": 17
-					},
-					"frame": {
-						"x": 0,
-						"y": 326,
-						"w": 16,
-						"h": 17
-					}
-				},
-				{
-					"filename": "dinosaur-sleep-03",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 15,
-						"w": 16,
-						"h": 17
-					},
-					"frame": {
-						"x": 0,
-						"y": 343,
-						"w": 16,
-						"h": 17
-					}
-				},
-				{
-					"filename": "dinosaur-walk-02",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 15,
-						"w": 16,
-						"h": 17
-					},
-					"frame": {
-						"x": 0,
-						"y": 360,
-						"w": 16,
-						"h": 17
-					}
-				},
-				{
-					"filename": "dinosaur-walk-05",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 15,
-						"w": 16,
-						"h": 17
-					},
-					"frame": {
-						"x": 0,
-						"y": 377,
-						"w": 16,
-						"h": 17
-					}
-				},
-				{
-					"filename": "dinosaur-idle-02",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 16,
-						"w": 16,
-						"h": 16
-					},
-					"frame": {
-						"x": 0,
-						"y": 394,
-						"w": 16,
-						"h": 16
-					}
-				},
-				{
-					"filename": "dinosaur-sleep-02",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 16,
-						"w": 16,
-						"h": 16
-					},
-					"frame": {
-						"x": 0,
-						"y": 410,
-						"w": 16,
-						"h": 16
-					}
-				},
-				{
-					"filename": "dinosaur-walk-00",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 16,
-						"w": 16,
-						"h": 16
-					},
-					"frame": {
-						"x": 0,
-						"y": 426,
-						"w": 16,
-						"h": 16
-					}
-				},
-				{
-					"filename": "dinosaur-walk-01",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 16,
-						"w": 16,
-						"h": 16
-					},
-					"frame": {
-						"x": 0,
-						"y": 442,
-						"w": 16,
-						"h": 16
-					}
-				},
-				{
-					"filename": "dinosaur-walk-03",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 16,
-						"w": 16,
-						"h": 16
-					},
-					"frame": {
-						"x": 0,
-						"y": 458,
-						"w": 16,
-						"h": 16
-					}
-				},
-				{
-					"filename": "dinosaur-walk-04",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 16,
-						"w": 16,
-						"h": 16
-					},
-					"frame": {
-						"x": 0,
-						"y": 474,
-						"w": 16,
-						"h": 16
+						"h": 19
 					}
 				}
 			]
 		}
 	],
 	"meta": {
-		"app": "http://free-tex-packer.com",
-		"version": "0.6.6"
+		"app": "http://github.com/odrick/free-tex-packer-cli",
+		"version": "0.2.8"
 	}
 }

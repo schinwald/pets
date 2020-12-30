@@ -29,7 +29,7 @@ class GameScene extends Scene {
 
 
 	public create() {
-		this.input.setDefaultCursor('url(./assets/cursors/pointer.png) 32 64, pointer')
+		this.input.setDefaultCursor('url(./assets/cursors/pointer.png) 5 5, pointer')
 
 
 		this.room = new Room(this, {

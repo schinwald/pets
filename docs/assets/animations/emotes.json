@@ -1,62 +1,42 @@
 {
 	"anims": [
 		{
-			"key": "emote-hungry",
+			"key": "emote-hunger",
 			"type": "frame",
 			"frames": [
 				{
 					"key": "emotes",
-					"frame": "emotes-hungry-00",
+					"frame": "emote-hungry-00",
 					"duration": 0
 				},
 				{
 					"key": "emotes",
-					"frame": "emotes-hungry-01",
+					"frame": "emote-hungry-01",
 					"duration": 0
 				},
 				{
 					"key": "emotes",
-					"frame": "emotes-hungry-02",
+					"frame": "emote-hungry-02",
 					"duration": 0
 				},
 				{
 					"key": "emotes",
-					"frame": "emotes-hungry-03",
-					"duration": 0
-				}
-			],
-			"frameRate": 1,
-			"duration": 1000,
-			"skipMissedFrames": true,
-			"delay": 0,
-			"repeat": 0,
-			"repeatDelay": 0,
-			"yoyo": false,
-			"showOnStart": false,
-			"hideOnComplete": false
-		},
-		{
-			"key": "emote-happy",
-			"type": "frame",
-			"frames": [
+					"frame": "emote-hungry-03",
+					"duration": 2000
+				},
 				{
 					"key": "emotes",
-					"frame": "emotes-happy-00",
+					"frame": "emote-hungry-02",
 					"duration": 0
 				},
 				{
 					"key": "emotes",
-					"frame": "emotes-happy-01",
+					"frame": "emote-hungry-01",
 					"duration": 0
 				},
 				{
 					"key": "emotes",
-					"frame": "emotes-happy-02",
-					"duration": 0
-				},
-				{
-					"key": "emotes",
-					"frame": "emotes-happy-03",
+					"frame": "emote-hungry-00",
 					"duration": 0
 				}
 			],
@@ -67,8 +47,58 @@
 			"repeat": 0,
 			"repeatDelay": 0,
 			"yoyo": false,
-			"showOnStart": false,
-			"hideOnComplete": false
+			"showOnStart": true,
+			"hideOnComplete": true
+		},
+		{
+			"key": "emote-happiness",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "emotes",
+					"frame": "emote-happy-00",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emote-happy-01",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emote-happy-02",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emote-happy-03",
+					"duration": 2000
+				},
+				{
+					"key": "emotes",
+					"frame": "emote-happy-02",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emote-happy-01",
+					"duration": 0
+				},
+				{
+					"key": "emotes",
+					"frame": "emote-happy-00",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": true,
+			"hideOnComplete": true
 		}
 	]
 }

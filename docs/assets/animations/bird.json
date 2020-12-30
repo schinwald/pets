@@ -114,6 +114,41 @@
 			"yoyo": false,
 			"showOnStart": false,
 			"hideOnComplete": false
+		},
+		{
+			"key": "bird-eat",
+			"type": "frame",
+			"frames": [
+				{
+				"key": "pets",
+				"frame": "bird-eat-00",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "bird-eat-01",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "bird-eat-02",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "bird-eat-03",
+				"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": -1,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
 		}
 	]
 }

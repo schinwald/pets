@@ -36,6 +36,7 @@ export class StateMachine {
 
 	
 	public transition(name: string) {
+		if (this.states.get(name) == undefined) return;
 		if (this.current != null) this.current.exit();
 		this.current = this.states.get(name);
 		this.current.enter();
