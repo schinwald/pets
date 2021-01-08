@@ -1,6 +1,6 @@
 import 'phaser';
 
-import { GameScene } from "./GameScene";
+import { GameScene } from "./scenes/GameScene";
 
 
 

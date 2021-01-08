@@ -2,8 +2,8 @@ import { Grid } from './Grid';
 import { RoomConfig, TileConfig } from './Types';
 import { PathFinder } from './PathFinder';
 import { Food } from './objects/Food';
-import { Pet } from './entities/pet/Pet';
-import { GameObjects } from 'phaser';
+import { Pet } from './entities/pets/Pet';
+import { Progress } from './Progress';
 
 import Scene = Phaser.Scene;
 import Group = Phaser.GameObjects.Group;
@@ -11,7 +11,8 @@ import Shader = Phaser.GameObjects.Shader;
 import Point = Phaser.Geom.Point;
 import GameObject = Phaser.GameObjects.GameObject;
 import Path = Phaser.Curves.Path;
-import { Progress } from './Progress';
+import Zone = Phaser.GameObjects.Zone;
+import Rectangle = Phaser.GameObjects.Rectangle;
 
 
 
@@ -62,6 +63,16 @@ export class Room extends Group {
 					coordinate: new Point(Tile.SIZE * i + Tile.SIZE/2 + background.x - background.width/2, Tile.SIZE * j + Tile.SIZE/2 + background.y - background.height/2),
 					blocked: false
 				});
+
+				// // setup interactive zones
+				// let zone = new Zone(this.scene, tile.getCoordinate().x, tile.getCoordinate().y, Tile.SIZE, Tile.SIZE);
+				// let rectangle = new Rectangle(this.scene, tile.getCoordinate().x, tile.getCoordinate().y, Tile.SIZE, Tile.SIZE);
+				// zone.setInteractive();
+				// zone.on('pointerdown', (pointer) => {
+				// 	if (pointer.leftButtonDown()) {
+				// 		rectangle.setVisible(true);
+				// 	}
+				// });
 				
 				// storing the data in the cell and cache
 				this.grid.setCell(tile.getPosition(), tile);
