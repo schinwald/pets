@@ -27,6 +27,7 @@ export class EatState extends State {
 		let tile = this.pet.room.getTile(position);
 		let food = tile.getData() as Food;
 		food.interact(this.pet);
+		food.eat(true);
 	}
 
 
@@ -40,9 +41,14 @@ export class EatState extends State {
 
 		if (this.duration >= 6000) {
 			this.duration = 0;
+
+			let position = this.pet.getTarget();
+			let tile = this.pet.room.getTile(position);
+			let food = tile.getData() as Food;
+			food.eat(false);
+			
 			this.machine.transition('idle');
 			return;
 		}
 	}
-	
 }

@@ -1,3 +1,4 @@
+import { Tilemaps } from "phaser";
 import { Pet } from "../entities/pets/Pet";
 import { Progress } from "../Progress";
 import { Room, Tile, TileData } from "../Room";
@@ -18,7 +19,9 @@ class Food extends GameObject implements TileData {
 
 	private sprite: Sprite;
 	private particles: ParticleEmitterManager;
+	private emitter: ParticleEmitter;
 	private progress: Progress;
+	private numEaters: number; 
 
 
 	constructor(scene: Scene, progress: Progress) {
@@ -29,7 +32,7 @@ class Food extends GameObject implements TileData {
 
 
 	private init() {
-		
+		this.numEaters = 0;
 	}
 
 
@@ -39,10 +42,10 @@ class Food extends GameObject implements TileData {
 		this.scene.add.existing(this.sprite);
 
 		this.particles = new ParticleEmitterManager(this.scene, 'particles');
-		this.particles.addEmitter(new ParticleEmitter(this.particles, {
+		
+		this.emitter = new ParticleEmitter(this.particles, {
 			alpha: { start: 1, end: 0, ease: 'Sin.easeOut' },
 			lifespan: 500,
-			maxParticles: 200,
 			angle: { min: 240, max: 300 },
 			speed: { min: 20, max: 40 },
 			frequency: 400,
@@ -52,7 +55,10 @@ class Food extends GameObject implements TileData {
 			frame: ['particles-food-00', 'particles-food-01', 'particles-food-02'],
 			followOffset: { x: 0, y: -5 },
 			follow: this.sprite
-		}));
+		});
+
+		this.particles.addEmitter(this.emitter);
+		this.emitter.setFrequency(-1);
 		this.scene.add.existing(this.particles);
 
 		if (this.progress.getPercentage() > 50) {
@@ -64,7 +70,7 @@ class Food extends GameObject implements TileData {
 		}
 	}
 
-
+ 
 	public interact(pet: Pet) {
 		let progress = pet.health.getFactor('hunger');
 
@@ -91,6 +97,28 @@ class Food extends GameObject implements TileData {
 		} else if (this.progress.getPercentage() == 0) {
 			this.sprite.setFrame('object-food-empty');
 		}
+	}
+
+
+	public eat(eat: boolean) {
+		if (eat) {
+			this.numEaters++;
+			this.emitter.setFrequency(400);
+		} else {
+			this.numEaters--;
+			this.emitter.setFrequency(-1);
+		}
+	}
+
+
+	public play(key: string) {
+		// switch (key) {
+		// 	case 'eat':
+		// 		this.
+		// 		break;
+		// 	default:
+		// 		break;
+		// }
 	}
 
 
