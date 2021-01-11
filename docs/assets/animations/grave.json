@@ -1,0 +1,94 @@
+{
+	"anims": [
+		{
+			"key": "grave-show",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "objects",
+					"frame": "object-grave-00",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-01",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-02",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-03",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-04",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-05",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": true,
+			"hideOnComplete": false
+		},
+		{
+			"key": "grave-hide",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "objects",
+					"frame": "object-grave-05",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-04",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-03",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-02",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-01",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "object-grave-00",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": true
+		}
+	]
+}

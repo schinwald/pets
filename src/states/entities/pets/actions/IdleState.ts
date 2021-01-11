@@ -43,7 +43,9 @@ export class IdleState extends State {
 			for (let name of this.pet.health.getFactorNames()) {
 				let factor = this.pet.health.getFactor(name);
 				
-				if (factor.getPercentage() >= 50) {
+				if (factor.getPercentage() == 100) {
+					this.machine.transition('die');
+				} else if (factor.getPercentage() >= 50) {
 					this.pet.emotions.transition(name);
 					this.machine.transition(name);
 					return;

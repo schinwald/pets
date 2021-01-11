@@ -46,6 +46,7 @@ export class Progress {
 
 	// 
 	public getPercentage(): number {
+		if (this.finish == 0) return 100;
 		return (this.current / this.finish) * 100;
 	}
 }

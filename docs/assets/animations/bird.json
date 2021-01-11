@@ -149,6 +149,41 @@
 			"yoyo": false,
 			"showOnStart": false,
 			"hideOnComplete": false
+		},
+		{
+			"key": "bird-die",
+			"type": "frame",
+			"frames": [
+				{
+				"key": "pets",
+				"frame": "bird-die-00",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "bird-die-01",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "bird-die-02",
+				"duration": 0
+				},
+				{
+				"key": "pets",
+				"frame": "bird-die-03",
+				"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
 		}
 	]
 }

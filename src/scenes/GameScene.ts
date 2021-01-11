@@ -24,6 +24,7 @@ class GameScene extends Scene {
 		this.load.animation('dinosaur', './assets/animations/dinosaur.json');
 		this.load.animation('bird', './assets/animations/bird.json');
 		this.load.animation('emotes', './assets/animations/emotes.json');
+		this.load.animation('grave', './assets/animations/grave.json');
 
 		this.load.glsl('ground', './assets/shaders/ground.glsl.js');
 	}

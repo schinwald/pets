@@ -39,6 +39,7 @@ class Food extends GameObject implements TileData {
 	public create(coordinate: Point) {
 		this.sprite = new Sprite(this.scene, coordinate.x, coordinate.y, 'objects');
 		this.sprite.setDisplayOrigin(16, 32);
+		this.sprite.setDepth(coordinate.y);
 		this.scene.add.existing(this.sprite);
 
 		this.particles = new ParticleEmitterManager(this.scene, 'particles');
@@ -48,7 +49,6 @@ class Food extends GameObject implements TileData {
 			lifespan: 500,
 			angle: { min: 240, max: 300 },
 			speed: { min: 20, max: 40 },
-			frequency: 400,
 			quantity: 30,
 			gravityY: 100,
 			emitZone: { type: 'random', source: new Rectangle(-4, 0, 8, 0) },
@@ -85,10 +85,6 @@ class Food extends GameObject implements TileData {
 			this.progress.decrement(progress.getCurrent() + remainder);
 			progress.decrement(progress.getCurrent() + remainder);
 		}
-		
-		if (this.progress.getPercentage() != 0) {
-			
-		}
 
 		if (this.progress.getPercentage() > 70) {
 			this.sprite.setFrame('object-food-full');
@@ -103,10 +99,10 @@ class Food extends GameObject implements TileData {
 	public eat(eat: boolean) {
 		if (eat) {
 			this.numEaters++;
-			this.emitter.setFrequency(400);
+			if (this.numEaters == 1) this.emitter.setFrequency(400);
 		} else {
 			this.numEaters--;
-			this.emitter.setFrequency(-1);
+			if (this.numEaters == 0) this.emitter.setFrequency(-1);
 		}
 	}
 

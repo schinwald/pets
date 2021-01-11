@@ -13,6 +13,7 @@ import GameObject = Phaser.GameObjects.GameObject;
 import Path = Phaser.Curves.Path;
 import Zone = Phaser.GameObjects.Zone;
 import Rectangle = Phaser.GameObjects.Rectangle;
+import List = Phaser.Structs.List;
 
 
 
@@ -22,7 +23,7 @@ export class Room extends Group {
 
 	private pathFinder: PathFinder;
 	private config: RoomConfig;
-	private pets: Array<Pet>;
+	private pets: List<Pet>;
 	
 	private tiles: Map<string, Array<Tile>>;
 
@@ -38,11 +39,9 @@ export class Room extends Group {
 
 		this.grid = new Grid(config.gridConfig);
 		this.pathFinder = new PathFinder(this.grid);
-		this.pets = new Array<Pet>();
+		this.pets = new List<Pet>(null);
 
 		this.tiles = new Map<string, Array<Tile>>();
-		this.tiles.set('empty', new Array<Tile>());
-		this.tiles.set('food', new Array<Tile>());
 	}
 
 
@@ -76,7 +75,7 @@ export class Room extends Group {
 				
 				// storing the data in the cell and cache
 				this.grid.setCell(tile.getPosition(), tile);
-				this.getTiles('empty').push(tile);
+				this.setTile(tile.getPosition(), null, false);
 			}
 		}
 
@@ -91,13 +90,20 @@ export class Room extends Group {
 	public invite(pet: Pet) {
 		pet.setRoom(this);
 		this.add(pet);
-		this.pets.push(pet);
+		this.pets.add(pet);
+	}
+
+
+	public uninvite(pet: Pet) {
+		pet.setRoom(null);
+		this.remove(pet);
+		this.pets.remove(pet);
 	}
 
 
 	public setTile(position: Point, data: TileData, blocked: boolean) {
 		let tile = this.getTile(position);
-		let key = null;
+		let key = 'empty';
 		let tiles = null;
 		let index = null;
 
@@ -109,7 +115,6 @@ export class Room extends Group {
 			if (index != -1) {
 				tiles.splice(index, 1);
 			}
-			console.log(index = tiles.indexOf(tile))
 		}
 
 		// update tile information
@@ -117,8 +122,12 @@ export class Room extends Group {
 		tile.setBlocked(blocked);
 	
 		// add the tile to its corresponding cached tile list
-		key = tile.getData().type;
+		if (data != null) key = tile.getData().type;
 		tiles = this.getTiles(key);
+		if (tiles == null) {
+			this.tiles.set(key, new Array<Tile>());
+			tiles = this.getTiles(key);
+		}
 		tiles.push(tile);
 	}
 	
@@ -145,7 +154,7 @@ export class Room extends Group {
 
 
 	public update(time: number, delta: number) {
-		this.pets.forEach(pet => pet.update(time, delta));
+		this.pets.each(pet => pet.update(time, delta));
 	}
 }
 

@@ -17,15 +17,16 @@ import Rectangle = Phaser.Geom.Rectangle;
 class Pet extends GameObject {
 	
 	public room: Room;
+	public alpha: number;
 
 	public health: Health;
 	public emotions: StateMachine;
 	public actions: StateMachine;
 	public movement: Movement;
 
-	private emotes: Sprite;
-	private sprite: Sprite;
-	private shadow: Ellipse;
+	public emotes: Sprite;
+	public sprite: Sprite;
+	public shadow: Ellipse;
 
 	private coordinate: Point;
 	private position: Point;
@@ -42,12 +43,12 @@ class Pet extends GameObject {
 		this.health = new Health();
 
 		this.health.setFactor('hunger', 50000);
-		this.health.setFactor('thirst', 100);
-		this.health.setFactor('exercise', 100);
-		this.health.setFactor('happiness',100);
-		this.health.setFactor('sickness', 100);
-		this.health.setFactor('bowel', 100);
-		this.health.setFactor('bladder', 100);
+		// this.health.setFactor('thirst', 100);
+		// this.health.setFactor('exercise', 100);
+		// this.health.setFactor('happiness',100);
+		// this.health.setFactor('sickness', 100);
+		// this.health.setFactor('bowel', 100);
+		// this.health.setFactor('bladder', 100);
 
 		this.emotions = new StateMachine(this);
 
@@ -60,6 +61,9 @@ class Pet extends GameObject {
 		this.actions.setState('explore', new Actions.ExploreState(this.actions));
 		this.actions.setState('hunger', new Actions.HungerState(this.actions));
 		this.actions.setState('eat', new Actions.EatState(this.actions));
+		this.actions.setState('die', new Actions.DieState(this.actions));
+
+		this.alpha = 1;
 	}
 
 
@@ -91,6 +95,7 @@ class Pet extends GameObject {
 
 	public setRoom(room: Room) {
 		this.room = room;
+		if (room == null) return;
 
 		let emptyTiles = this.room.getTiles('empty');
 
@@ -122,6 +127,13 @@ class Pet extends GameObject {
 		this.target = target;
 	}
 
+
+	public setAlpha(alpha: number) {
+		this.emotes.setAlpha(alpha);
+		this.sprite.setAlpha(alpha);
+		this.shadow.setAlpha(alpha);
+	}
+
 	
 	public getTarget() {
 		return this.target;
@@ -133,13 +145,13 @@ class Pet extends GameObject {
 	}
 
 
-	public play(key: string) {
-		this.sprite.play(this.type + '-' + key);
+	public play(key: string): Sprite {
+		return this.sprite.play(this.type + '-' + key);
 	}
 
 
-	public emote(key: string) {
-		this.emotes.play('emote' + '-' + key);
+	public emote(key: string): Sprite {
+		return this.emotes.play('emote' + '-' + key);
 	}
 
 	
@@ -161,8 +173,19 @@ class Pet extends GameObject {
 		this.emotes.setDepth(this.coordinate.y + (2 / layers));
 		this.sprite.setDepth(this.coordinate.y + (1 / layers));
 		this.shadow.setDepth(this.coordinate.y + (0 / layers));
+
+		this.setAlpha(this.alpha);
+	}
+
+
+	public destroy() {
+		super.destroy();
+		this.sprite.destroy();
+		this.shadow.destroy();
+		this.emotes.destroy();
 	}
 }
+
 
 
 export { Pet }
