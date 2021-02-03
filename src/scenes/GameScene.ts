@@ -15,7 +15,7 @@ class GameScene extends Scene {
 	}
 	
 
-	public preload() {		
+	public preload() {
 		this.load.atlas('pets', './assets/sprites/pets.png', './assets/sprites/pets.json');
 		this.load.atlas('emotes', './assets/sprites/emotes.png', './assets/sprites/emotes.json');
 		this.load.atlas('objects', './assets/sprites/objects.png', './assets/sprites/objects.json');

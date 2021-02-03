@@ -4,6 +4,7 @@ import { PathFinder } from './PathFinder';
 import { Food } from './objects/Food';
 import { Pet } from './entities/pets/Pet';
 import { Progress } from './Progress';
+import { Wall } from './objects/Wall';
 
 import Scene = Phaser.Scene;
 import Group = Phaser.GameObjects.Group;
@@ -60,18 +61,22 @@ export class Room extends Group {
 					data: null,
 					position: new Point(i, j),
 					coordinate: new Point(Tile.SIZE * i + Tile.SIZE/2 + background.x - background.width/2, Tile.SIZE * j + Tile.SIZE/2 + background.y - background.height/2),
+					walls: new Array<Wall>(null, null, null, null),
 					blocked: false
 				});
 
-				// // setup interactive zones
-				// let zone = new Zone(this.scene, tile.getCoordinate().x, tile.getCoordinate().y, Tile.SIZE, Tile.SIZE);
-				// let rectangle = new Rectangle(this.scene, tile.getCoordinate().x, tile.getCoordinate().y, Tile.SIZE, Tile.SIZE);
-				// zone.setInteractive();
-				// zone.on('pointerdown', (pointer) => {
-				// 	if (pointer.leftButtonDown()) {
-				// 		rectangle.setVisible(true);
-				// 	}
-				// });
+				// setup interactive zones
+				let zone = new Zone(this.scene, tile.getCoordinate().x, tile.getCoordinate().y, Tile.SIZE, Tile.SIZE);
+				zone.setInteractive();
+				zone.on('pointerdown', (pointer) => {
+					if (pointer.leftButtonDown()) {
+						let wall = new Wall(this.scene);
+						wall.create(new Point(0, 0));
+						wall.setRoom(this);
+						wall.place(tile.getPosition());
+					}
+				}, tile);
+				this.scene.add.existing(zone);
 				
 				// storing the data in the cell and cache
 				this.grid.setCell(tile.getPosition(), tile);
@@ -106,6 +111,8 @@ export class Room extends Group {
 		let key = 'empty';
 		let tiles = null;
 		let index = null;
+
+		if (tile == null) return;
 
 		// removes the tile from its corresponding cached tile list
 		if (tile.getData() != null) {

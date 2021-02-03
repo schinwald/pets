@@ -13,8 +13,8 @@ export class Grave extends GameObject implements TileData {
 	private sprite: Sprite;
 
 
-	constructor(scene: Scene, type: string) {
-		super(scene, type);
+	constructor(scene: Scene) {
+		super(scene, 'grave');
 	}
 
 

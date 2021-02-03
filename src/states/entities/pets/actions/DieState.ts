@@ -41,7 +41,7 @@ export class DieState extends State {
 				duration: 1000,
 				onComplete: () => {
 					let position = this.pet.getPosition();
-					let grave = new Grave(this.scene, 'grave');
+					let grave = new Grave(this.scene);
 					this.room.setTile(position, grave, false);
 
 					let tile = this.room.getTile(position);

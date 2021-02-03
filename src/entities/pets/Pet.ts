@@ -36,7 +36,7 @@ class Pet extends GameObject {
 	constructor(scene: Scene, type: string) {
 		super(scene, type);
 		this.init();
-	}
+}
 
 
 	private init() {
@@ -129,7 +129,7 @@ class Pet extends GameObject {
 
 
 	public setAlpha(alpha: number) {
-		this.emotes.setAlpha(alpha);
+		this.emotes.setAlpha(alpha * 0.8);
 		this.sprite.setAlpha(alpha);
 		this.shadow.setAlpha(alpha);
 	}
