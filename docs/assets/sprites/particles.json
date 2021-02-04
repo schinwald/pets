@@ -1,7 +1,7 @@
 {
 	"textures": [
 		{
-			"image": "particles.png",
+			"image": "",
 			"format": "RGBA8888",
 			"size": {
 				"w": 1,
@@ -76,7 +76,7 @@
 		}
 	],
 	"meta": {
-		"app": "http://free-tex-packer.com",
-		"version": "0.6.6"
+		"app": "http://github.com/odrick/free-tex-packer-cli",
+		"version": "0.2.8"
 	}
 }

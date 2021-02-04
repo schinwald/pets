@@ -41,16 +41,8 @@ class GameScene extends Scene {
 		});
 		
 		this.room.create();
-
-		for (let i = 0; i < 2; i++) {
-			let random = Math.random();
-
-			if (random >= 0.50) {
-				this.room.invite(new Pet(this, 'dinosaur'));
-			} else {
-				this.room.invite(new Pet(this, 'bird'));
-			}
-		}
+		this.room.invite(new Pet(this, 'bird'));
+		this.room.invite(new Pet(this, 'dinosaur'));
 	}
 
 

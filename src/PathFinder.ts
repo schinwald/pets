@@ -1,4 +1,5 @@
 import { Grid, Cell } from "./Grid";
+import { Tile, TileData } from './Room';
 
 import Point = Phaser.Geom.Point;
 import List = Phaser.Structs.List;
@@ -67,7 +68,7 @@ class PathFinder {
 					current = current.parent;
 				}
 
-				//
+				// 
 				let first = points.first;
 				let path = new Path(first.x, first.y);
 				let point = points.next;
@@ -112,15 +113,17 @@ class PathFinder {
 		let successors = new Array<Node>();
 
 		let cell = parent.data as Cell;
+		let tile = cell.getData() as Tile;
 		let position = cell.getPosition();
 
 		let positions = new Array<Point>(4);
-		positions[0] = new Point(position.x, position.y - 1);
-		positions[1] = new Point(position.x, position.y + 1);
-		positions[2] = new Point(position.x - 1, position.y);
-		positions[3] = new Point(position.x + 1, position.y);
+		positions[0] = new Point(position.x + 0, position.y - 1);
+		positions[1] = new Point(position.x + 1, position.y + 0);
+		positions[2] = new Point(position.x + 0, position.y + 1);
+		positions[3] = new Point(position.x - 1, position.y + 0);
 
 		for (let i = 0; i < positions.length; i++) {
+			if (tile.walls[i] != null) continue;
 			let cell = this.grid.getCell(positions[i]);
 			
 			// check if positions are valid and add them to node children

@@ -4,13 +4,13 @@
 			"image": "",
 			"format": "RGBA8888",
 			"size": {
-				"w": 93,
-				"h": 95
+				"w": 62,
+				"h": 69
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "object-wall-15",
+					"filename": "object-wall-vertical",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -18,79 +18,16 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 8,
-						"y": 8,
-						"w": 16,
-						"h": 32
+						"x": 15,
+						"y": 14,
+						"w": 2,
+						"h": 27
 					},
 					"frame": {
 						"x": 0,
 						"y": 0,
-						"w": 16,
-						"h": 32
-					}
-				},
-				{
-					"filename": "object-wall-07",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 14,
-						"w": 16,
-						"h": 26
-					},
-					"frame": {
-						"x": 16,
-						"y": 0,
-						"w": 16,
-						"h": 26
-					}
-				},
-				{
-					"filename": "object-wall-13",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 8,
-						"w": 16,
-						"h": 26
-					},
-					"frame": {
-						"x": 32,
-						"y": 0,
-						"w": 16,
-						"h": 26
-					}
-				},
-				{
-					"filename": "object-grave-05",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 7,
-						"y": 12,
-						"w": 18,
-						"h": 20
-					},
-					"frame": {
-						"x": 16,
-						"y": 26,
-						"w": 18,
-						"h": 20
+						"w": 2,
+						"h": 27
 					}
 				},
 				{
@@ -102,20 +39,20 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 7,
-						"y": 12,
-						"w": 17,
+						"x": 8,
+						"y": 14,
+						"w": 15,
 						"h": 20
 					},
 					"frame": {
-						"x": 34,
-						"y": 26,
-						"w": 17,
+						"x": 2,
+						"y": 0,
+						"w": 15,
 						"h": 20
 					}
 				},
 				{
-					"filename": "object-wall-05",
+					"filename": "object-grave-05",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -129,52 +66,10 @@
 						"h": 20
 					},
 					"frame": {
-						"x": 0,
-						"y": 32,
+						"x": 17,
+						"y": 0,
 						"w": 16,
 						"h": 20
-					}
-				},
-				{
-					"filename": "object-wall-11",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 8,
-						"w": 10,
-						"h": 32
-					},
-					"frame": {
-						"x": 51,
-						"y": 0,
-						"w": 10,
-						"h": 32
-					}
-				},
-				{
-					"filename": "object-wall-14",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 14,
-						"y": 8,
-						"w": 10,
-						"h": 32
-					},
-					"frame": {
-						"x": 51,
-						"y": 32,
-						"w": 10,
-						"h": 32
 					}
 				},
 				{
@@ -186,20 +81,20 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 8,
-						"y": 13,
-						"w": 16,
+						"x": 9,
+						"y": 15,
+						"w": 14,
 						"h": 19
 					},
 					"frame": {
 						"x": 0,
-						"y": 64,
-						"w": 16,
+						"y": 27,
+						"w": 14,
 						"h": 19
 					}
 				},
 				{
-					"filename": "object-wall-03",
+					"filename": "object-wall-horizontal",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -207,184 +102,16 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 8,
-						"y": 14,
-						"w": 10,
-						"h": 26
+						"x": 7,
+						"y": 22,
+						"w": 18,
+						"h": 11
 					},
 					"frame": {
-						"x": 16,
-						"y": 46,
-						"w": 10,
-						"h": 26
-					}
-				},
-				{
-					"filename": "object-wall-06",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
 						"x": 14,
-						"y": 14,
-						"w": 10,
-						"h": 26
-					},
-					"frame": {
-						"x": 26,
-						"y": 46,
-						"w": 10,
-						"h": 26
-					}
-				},
-				{
-					"filename": "object-wall-09",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 8,
-						"w": 10,
-						"h": 26
-					},
-					"frame": {
-						"x": 36,
-						"y": 46,
-						"w": 10,
-						"h": 26
-					}
-				},
-				{
-					"filename": "object-wall-12",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 14,
-						"y": 8,
-						"w": 10,
-						"h": 26
-					},
-					"frame": {
-						"x": 61,
-						"y": 0,
-						"w": 10,
-						"h": 26
-					}
-				},
-				{
-					"filename": "object-grave-02",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 19,
-						"w": 16,
-						"h": 13
-					},
-					"frame": {
-						"x": 46,
-						"y": 64,
-						"w": 16,
-						"h": 13
-					}
-				},
-				{
-					"filename": "object-wall-01",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 8,
-						"y": 14,
-						"w": 10,
-						"h": 20
-					},
-					"frame": {
-						"x": 61,
-						"y": 26,
-						"w": 10,
-						"h": 20
-					}
-				},
-				{
-					"filename": "object-wall-04",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 14,
-						"y": 14,
-						"w": 10,
-						"h": 20
-					},
-					"frame": {
-						"x": 62,
-						"y": 46,
-						"w": 10,
-						"h": 20
-					}
-				},
-				{
-					"filename": "object-poop-06",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 10,
-						"y": 23,
-						"w": 14,
-						"h": 14
-					},
-					"frame": {
-						"x": 62,
-						"y": 66,
-						"w": 14,
-						"h": 14
-					}
-				},
-				{
-					"filename": "object-poop-02",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 10,
-						"y": 23,
-						"w": 14,
-						"h": 13
-					},
-					"frame": {
-						"x": 71,
-						"y": 0,
-						"w": 14,
-						"h": 13
+						"y": 20,
+						"w": 18,
+						"h": 11
 					}
 				},
 				{
@@ -402,8 +129,8 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 0,
-						"y": 52,
+						"x": 14,
+						"y": 31,
 						"w": 15,
 						"h": 12
 					}
@@ -423,8 +150,8 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 16,
-						"y": 72,
+						"x": 33,
+						"y": 0,
 						"w": 15,
 						"h": 12
 					}
@@ -444,14 +171,119 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 31,
-						"y": 72,
+						"x": 33,
+						"y": 12,
 						"w": 15,
 						"h": 12
 					}
 				},
 				{
-					"filename": "object-poop-03",
+					"filename": "object-food-empty",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 27,
+						"w": 14,
+						"h": 8
+					},
+					"frame": {
+						"x": 32,
+						"y": 24,
+						"w": 14,
+						"h": 8
+					}
+				},
+				{
+					"filename": "object-food-full",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 24,
+						"w": 14,
+						"h": 11
+					},
+					"frame": {
+						"x": 29,
+						"y": 32,
+						"w": 14,
+						"h": 11
+					}
+				},
+				{
+					"filename": "object-food-half",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 26,
+						"w": 14,
+						"h": 9
+					},
+					"frame": {
+						"x": 0,
+						"y": 46,
+						"w": 14,
+						"h": 9
+					}
+				},
+				{
+					"filename": "object-grave-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 21,
+						"w": 14,
+						"h": 13
+					},
+					"frame": {
+						"x": 48,
+						"y": 0,
+						"w": 14,
+						"h": 13
+					}
+				},
+				{
+					"filename": "object-poop-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 25,
+						"w": 14,
+						"h": 11
+					},
+					"frame": {
+						"x": 48,
+						"y": 13,
+						"w": 14,
+						"h": 11
+					}
+				},
+				{
+					"filename": "object-poop-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -460,15 +292,36 @@
 					},
 					"spriteSourceSize": {
 						"x": 10,
-						"y": 24,
-						"w": 13,
+						"y": 23,
+						"w": 14,
 						"h": 13
 					},
 					"frame": {
-						"x": 71,
-						"y": 13,
-						"w": 13,
+						"x": 46,
+						"y": 24,
+						"w": 14,
 						"h": 13
+					}
+				},
+				{
+					"filename": "object-poop-06",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 23,
+						"w": 14,
+						"h": 14
+					},
+					"frame": {
+						"x": 43,
+						"y": 37,
+						"w": 14,
+						"h": 14
 					}
 				},
 				{
@@ -486,10 +339,31 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 71,
-						"y": 26,
+						"x": 0,
+						"y": 55,
 						"w": 12,
 						"h": 14
+					}
+				},
+				{
+					"filename": "object-poop-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 24,
+						"w": 13,
+						"h": 13
+					},
+					"frame": {
+						"x": 12,
+						"y": 55,
+						"w": 13,
+						"h": 13
 					}
 				},
 				{
@@ -507,8 +381,8 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 72,
-						"y": 40,
+						"x": 14,
+						"y": 43,
 						"w": 13,
 						"h": 12
 					}
@@ -528,14 +402,14 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 72,
-						"y": 52,
+						"x": 25,
+						"y": 55,
 						"w": 12,
 						"h": 13
 					}
 				},
 				{
-					"filename": "object-food-full",
+					"filename": "object-grave-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -543,20 +417,20 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 9,
-						"y": 24,
-						"w": 14,
-						"h": 11
+						"x": 10,
+						"y": 33,
+						"w": 12,
+						"h": 1
 					},
 					"frame": {
-						"x": 0,
-						"y": 83,
-						"w": 14,
-						"h": 11
+						"x": 2,
+						"y": 20,
+						"w": 12,
+						"h": 1
 					}
 				},
 				{
-					"filename": "object-poop-00",
+					"filename": "object-grave-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -564,16 +438,16 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 9,
-						"y": 25,
-						"w": 14,
-						"h": 11
+						"x": 10,
+						"y": 27,
+						"w": 12,
+						"h": 7
 					},
 					"frame": {
-						"x": 46,
-						"y": 77,
-						"w": 14,
-						"h": 11
+						"x": 27,
+						"y": 43,
+						"w": 12,
+						"h": 7
 					}
 				},
 				{
@@ -591,8 +465,8 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 76,
-						"y": 65,
+						"x": 37,
+						"y": 51,
 						"w": 12,
 						"h": 12
 					}
@@ -612,178 +486,10 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 76,
-						"y": 77,
+						"x": 49,
+						"y": 51,
 						"w": 12,
 						"h": 12
-					}
-				},
-				{
-					"filename": "object-wall-10",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 14,
-						"y": 8,
-						"w": 4,
-						"h": 32
-					},
-					"frame": {
-						"x": 85,
-						"y": 0,
-						"w": 4,
-						"h": 32
-					}
-				},
-				{
-					"filename": "object-food-half",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 9,
-						"y": 26,
-						"w": 14,
-						"h": 9
-					},
-					"frame": {
-						"x": 60,
-						"y": 80,
-						"w": 14,
-						"h": 9
-					}
-				},
-				{
-					"filename": "object-food-empty",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 9,
-						"y": 27,
-						"w": 14,
-						"h": 8
-					},
-					"frame": {
-						"x": 14,
-						"y": 84,
-						"w": 14,
-						"h": 8
-					}
-				},
-				{
-					"filename": "object-wall-02",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 14,
-						"y": 14,
-						"w": 4,
-						"h": 26
-					},
-					"frame": {
-						"x": 85,
-						"y": 32,
-						"w": 4,
-						"h": 26
-					}
-				},
-				{
-					"filename": "object-wall-08",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 14,
-						"y": 8,
-						"w": 4,
-						"h": 26
-					},
-					"frame": {
-						"x": 88,
-						"y": 58,
-						"w": 4,
-						"h": 26
-					}
-				},
-				{
-					"filename": "object-grave-01",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 9,
-						"y": 25,
-						"w": 14,
-						"h": 7
-					},
-					"frame": {
-						"x": 28,
-						"y": 84,
-						"w": 14,
-						"h": 7
-					}
-				},
-				{
-					"filename": "object-wall-00",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 14,
-						"y": 14,
-						"w": 4,
-						"h": 20
-					},
-					"frame": {
-						"x": 89,
-						"y": 0,
-						"w": 4,
-						"h": 20
-					}
-				},
-				{
-					"filename": "object-grave-00",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 10,
-						"y": 31,
-						"w": 12,
-						"h": 1
-					},
-					"frame": {
-						"x": 0,
-						"y": 94,
-						"w": 12,
-						"h": 1
 					}
 				}
 			]

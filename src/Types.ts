@@ -16,7 +16,6 @@ type TileConfig = {
 	position: Point;
 	coordinate: Point;
 	data: TileData;
-	walls: Array<Wall>;
 	blocked: boolean;
 }
 

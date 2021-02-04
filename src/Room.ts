@@ -12,8 +12,8 @@ import Shader = Phaser.GameObjects.Shader;
 import Point = Phaser.Geom.Point;
 import GameObject = Phaser.GameObjects.GameObject;
 import Path = Phaser.Curves.Path;
-import Zone = Phaser.GameObjects.Zone;
 import Rectangle = Phaser.GameObjects.Rectangle;
+import Zone = Phaser.GameObjects.Zone;
 import List = Phaser.Structs.List;
 
 
@@ -27,6 +27,7 @@ export class Room extends Group {
 	private pets: List<Pet>;
 	
 	private tiles: Map<string, Array<Tile>>;
+	private zones: Map<string, Array<Zone>>;
 
 
 	constructor(scene: Scene, config: RoomConfig) {
@@ -43,6 +44,7 @@ export class Room extends Group {
 		this.pets = new List<Pet>(null);
 
 		this.tiles = new Map<string, Array<Tile>>();
+		this.zones = new Map<string, Array<Zone>>();
 	}
 
 
@@ -54,26 +56,23 @@ export class Room extends Group {
 		this.add(background);
 		this.scene.add.existing(background);
 
+		let offset = new Point(this.scene.cameras.main.centerX - width/2, this.scene.cameras.main.centerY - height/2)
+
 		for(let i = 0; i < this.config.gridConfig.dimensions.rows; i++) {
 			for(let j = 0; j < this.config.gridConfig.dimensions.columns; j++) {
 				// creating the data to be stored in the cell
 				let tile = new Tile({
 					data: null,
-					position: new Point(i, j),
-					coordinate: new Point(Tile.SIZE * i + Tile.SIZE/2 + background.x - background.width/2, Tile.SIZE * j + Tile.SIZE/2 + background.y - background.height/2),
-					walls: new Array<Wall>(null, null, null, null),
+					position: new Point(j, i),
+					coordinate: new Point(Tile.SIZE * j + Tile.SIZE/2 + offset.x, Tile.SIZE * i + Tile.SIZE/2 + offset.y),
 					blocked: false
-				});
+				}, new Array<Wall>(null, null, null, null));
 
-				// setup interactive zones
 				let zone = new Zone(this.scene, tile.getCoordinate().x, tile.getCoordinate().y, Tile.SIZE, Tile.SIZE);
 				zone.setInteractive();
 				zone.on('pointerdown', (pointer) => {
 					if (pointer.leftButtonDown()) {
-						let wall = new Wall(this.scene);
-						wall.create(new Point(0, 0));
-						wall.setRoom(this);
-						wall.place(tile.getPosition());
+						console.log(tile);
 					}
 				}, tile);
 				this.scene.add.existing(zone);
@@ -81,6 +80,102 @@ export class Room extends Group {
 				// storing the data in the cell and cache
 				this.grid.setCell(tile.getPosition(), tile);
 				this.setTile(tile.getPosition(), null, false);
+			}
+		}
+
+		// setup walls
+		for(let i = 0; i < this.config.gridConfig.dimensions.rows + 1; i++) {			
+			for(let j = 0; j < this.config.gridConfig.dimensions.columns + 1; j++) {
+
+				// setup horizontal walls
+				if (j != this.config.gridConfig.dimensions.rows) {
+					let position = new Point(j, i - 0.5);
+					let coordinate = new Point(Tile.SIZE * position.x + Tile.SIZE/2 + offset.x, Tile.SIZE * position.y + Tile.SIZE/2 + offset.y);
+					let zone = new Zone(this.scene, coordinate.x, coordinate.y, Tile.SIZE - Tile.SIZE/4, Tile.SIZE/4);
+
+					zone.setInteractive();
+
+					zone.on('pointerdown', (pointer) => {
+						if (pointer.leftButtonDown()) {
+							let wall = new Wall(this.scene, "horizontal");
+							wall.setRoom(this);
+							if (wall.place(position)) wall.create(coordinate);
+							else wall.destroy();
+						} else if (pointer.rightButtonDown()) {
+							let below = this.getTile(new Point(position.x, position.y + 0.5));
+							if (below != null && below.walls[0] != null) {
+								below.walls[0].destroy();
+								console.log(below.walls[0]);
+								below.walls[0] = null;
+							}
+
+							let above = this.getTile(new Point(position.x, position.y - 0.5));
+							if (above != null && above.walls[2] != null) {
+								above.walls[2].destroy();
+								console.log(above.walls[2]);
+								above.walls[2] = null;
+							}
+						}
+					});
+
+					let rectangle = new Rectangle(this.scene, coordinate.x, coordinate.y, Tile.SIZE - Tile.SIZE/4, Tile.SIZE/4, 0x000000, 0.3);
+					rectangle.setVisible(false);
+
+					zone.on('pointerover', (pointer) => {
+						rectangle.setVisible(true);
+					});
+
+					zone.on('pointerout', (pointer) => {
+						rectangle.setVisible(false);
+					});
+
+					this.scene.add.existing(rectangle);
+					this.scene.add.existing(zone);
+				}
+
+				// setup vertical walls
+				if (i != this.config.gridConfig.dimensions.columns) {
+					let position = new Point(j - 0.5, i);
+					let coordinate = new Point(Tile.SIZE * position.x + Tile.SIZE/2 + offset.x, Tile.SIZE * position.y + Tile.SIZE/2 + offset.y);
+					let zone = new Zone(this.scene, coordinate.x, coordinate.y, Tile.SIZE/4, Tile.SIZE - Tile.SIZE/4);
+
+					zone.setInteractive();
+					
+					zone.on('pointerdown', (pointer) => {
+						if (pointer.leftButtonDown()) {
+							let wall = new Wall(this.scene, "vertical");
+							wall.setRoom(this);
+							if (wall.place(position)) wall.create(coordinate);
+							else wall.destroy();
+						} else if (pointer.rightButtonDown()) {
+							let right = this.getTile(new Point(position.x + 0.5, position.y));
+							if (right != null && right.walls[1] != null) {
+								right.walls[3].destroy();
+								right.walls[3] = null;
+							}
+
+							let left = this.getTile(new Point(position.x - 0.5, position.y));
+							if (left != null && left.walls[1] != null) {
+								left.walls[1].destroy();
+								left.walls[1] = null;
+							}
+						}
+					});
+
+					let rectangle = new Rectangle(this.scene, coordinate.x, coordinate.y, Tile.SIZE/4, Tile.SIZE - Tile.SIZE/4, 0x000000, 0.3);
+					rectangle.setVisible(false);
+
+					zone.on('pointerover', (pointer) => {
+						rectangle.setVisible(true);
+					});
+
+					zone.on('pointerout', (pointer) => {
+						rectangle.setVisible(false);
+					});
+
+					this.scene.add.existing(rectangle);
+					this.scene.add.existing(zone);
+				}
 			}
 		}
 
@@ -170,10 +265,12 @@ export class Room extends Group {
 export class Tile {
 
 	public static readonly SIZE: number = 16;
+	public walls: Array<Wall>;
 	private config: TileConfig;
 
 
-	constructor(config: TileConfig) {
+	constructor(config: TileConfig, walls: Array<Wall>) {
+		this.walls = walls;
 		this.configure(config);
 	}
 

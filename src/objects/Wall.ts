@@ -1,5 +1,5 @@
 import { Pet } from "../entities/pets/Pet";
-import { Room, TileData } from "../Room";
+import { Room, Tile, TileData } from "../Room";
 
 import GameObject = Phaser.GameObjects.GameObject;
 import Scene = Phaser.Scene;
@@ -12,12 +12,13 @@ export class Wall extends GameObject implements TileData {
 
 	public room: Room;
 
+	private position: Point;
 	private sprite: Sprite;
-	private bits: number;
 
 
-	constructor(scene: Scene) {
-		super(scene, 'wall');
+	constructor(scene: Scene, type: string) {
+		super(scene, type);
+		this.position = null;
 	}
 
 
@@ -28,9 +29,13 @@ export class Wall extends GameObject implements TileData {
 
 	public create(coordinate: Point) {
 		this.sprite = new Sprite(this.scene, coordinate.x, coordinate.y, 'objects');
-		this.sprite.setFrame('object-wall-05');
+		this.sprite.setFrame('object-wall-' + this.type);
 		this.sprite.setDisplayOrigin(16, 32);
-		this.sprite.setDepth(coordinate.y);
+		if (this.type == 'vertical') {
+			this.sprite.setDepth(coordinate.y + Tile.SIZE/2);
+		} else if (this.type == 'horizontal') {
+			this.sprite.setDepth(coordinate.y);
+		}
 		this.scene.add.existing(this.sprite);
 	}
 
@@ -40,63 +45,41 @@ export class Wall extends GameObject implements TileData {
 	}
 
 
-	public place(position: Point) {
-		if (this.room == null) return;
-		if (this.room.getTile(position) == null) return; 
-		if (this.room.getTile(position).getData() != null) return;
+	public place(position: Point): boolean {
+		this.position = position;
 
-		// clockwise adjacent positions
-		// binary number representation is read in this way too
-		let adjacents = new Array<Point>();
-		adjacents[0] = new Point(position.x + 0, position.y - 1);
-		adjacents[1] = new Point(position.x + 1, position.y + 0);
-		adjacents[2] = new Point(position.x + 0, position.y + 1);
-		adjacents[3] = new Point(position.x - 1, position.y + 0);
+		let added = false;
 
-		// calculate appropriate frame using marching squares
-		let bits = 0;
-		for (let i = 0; i < 4; i++) {
-			let adjacent = adjacents[i];
+		if (this.type == 'horizontal') {
+			let below = this.room.getTile(new Point(position.x, position.y + 0.5));
+			if (below != null && below.walls[0] == null) {
+				below.walls[0] = this;
+				added = true;
+			}
+	
+			let above = this.room.getTile(new Point(position.x, position.y - 0.5));
+			if (above != null && above.walls[2] == null) {
+				above.walls[2] = this;
+				added = true;
+			}
+		} else if (this.type == 'vertical') {
+			let right = this.room.getTile(new Point(position.x + 0.5, position.y));
+			if (right != null && right.walls[3] == null) {
+				right.walls[3] = this;
+				added = true;
+			}
 
-			bits = bits << 1;
-
-			if (this.room.getTile(adjacent) == null) continue;
-			if (this.room.getTile(adjacent).getData() == null) continue;
-			if (this.room.getTile(adjacent).getData().type != "wall") continue;
-
-			let adjacentWall = this.room.getTile(adjacent).getData() as Wall;
-			let adjacentBits = adjacentWall.getFrame();
-
-			let mask = 0;
-			if (i == 0) mask = Math.pow(2, 1);
-			if (i == 1) mask = Math.pow(2, 0);
-			if (i == 2) mask = Math.pow(2, 3);
-			if (i == 3) mask = Math.pow(2, 2);
-
-			adjacentBits = adjacentBits | mask;
-			adjacentWall.setFrame(adjacentBits);
-
-			bits += 1;
+			let left = this.room.getTile(new Point(position.x - 0.5, position.y));
+			if (left != null && left.walls[1] == null) {
+				left.walls[1] = this;
+				added = true;
+			}
 		}
 
-		this.room.setTile(position, this, true);
-		this.setFrame(bits);
-
-		let tile = this.room.getTile(position);
-		this.sprite.copyPosition(tile.getCoordinate());
-		this.sprite.setDepth(tile.getCoordinate().y);
+		return added;
 	}
 
-
-	public setFrame(bits: number) {
-		this.bits = bits;
-		let padding = '0' + bits;
-		let frame = padding.substr(padding.length-2);
-		this.sprite.setFrame('object-wall-' + frame);
-	}
-
-	
-	public getFrame(): number {
-		return this.bits;
+	public destroy() {
+		this.sprite.destroy();
 	}
 }

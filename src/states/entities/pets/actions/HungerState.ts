@@ -49,9 +49,9 @@ export class HungerState extends State {
 
 		let adjacents = new Array<Point>(4);
 		adjacents[0] = new Point(position.x + 0, position.y - 1);
-		adjacents[1] = new Point(position.x + 0, position.y + 1);
-		adjacents[2] = new Point(position.x - 1, position.y + 0);
-		adjacents[3] = new Point(position.x + 1, position.y + 0);
+		adjacents[1] = new Point(position.x + 1, position.y + 0);
+		adjacents[2] = new Point(position.x + 0, position.y + 1);
+		adjacents[3] = new Point(position.x - 1, position.y + 0);
 
 		// find closest adjacent tile to food tile
 		shortestDistance = -1;
@@ -72,6 +72,8 @@ export class HungerState extends State {
 			this.machine.transition('idle');
 			return;
 		}
+
+		console.log(this.pet.getPosition(), adjacents[shortestIndex]);
 
 		this.pet.movement.move(adjacents[shortestIndex]);
 		this.pet.setTarget(position);
