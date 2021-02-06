@@ -105,6 +105,7 @@ class Pet extends GameObject {
 			this.create(tile.getPosition());
 
 			this.movement = new Movement(this.scene, this);
+			this.movement.setDebugger(true);
 			this.movement.copyPosition(tile.getPosition());
 
 			this.emotions.transition('neutral');

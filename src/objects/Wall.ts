@@ -80,6 +80,6 @@ export class Wall extends GameObject implements TileData {
 	}
 
 	public destroy() {
-		this.sprite.destroy();
+		if (this.sprite != null) this.sprite.destroy();
 	}
 }

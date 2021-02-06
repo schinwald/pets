@@ -1,8 +1,11 @@
 import { Room } from '../Room';
 import { Pet } from '../entities/pets/Pet';
 import { Dimensions } from '../Grid';
+import { Food } from '../objects/Food';
+import { Progress } from '../Progress';
 
 import Scene = Phaser.Scene;
+import Point = Phaser.Geom.Point;
 
 
 class GameScene extends Scene {
@@ -41,6 +44,13 @@ class GameScene extends Scene {
 		});
 		
 		this.room.create();
+
+		let position = new Point(2, 2);
+		let food = new Food(this, new Progress(100000, 100000));
+		food.create(this.room.getTile(position).getCoordinate());
+		this.add.existing(food);
+		this.room.setTile(position, food, true);
+
 		this.room.invite(new Pet(this, 'bird'));
 		this.room.invite(new Pet(this, 'dinosaur'));
 	}

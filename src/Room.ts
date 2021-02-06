@@ -149,13 +149,13 @@ export class Room extends Group {
 							else wall.destroy();
 						} else if (pointer.rightButtonDown()) {
 							let right = this.getTile(new Point(position.x + 0.5, position.y));
-							if (right != null && right.walls[1] != null) {
+							if (right != null && right.walls[3] != null) {
 								right.walls[3].destroy();
 								right.walls[3] = null;
 							}
 
 							let left = this.getTile(new Point(position.x - 0.5, position.y));
-							if (left != null && left.walls[1] != null) {
+							if (left != null && left.walls[3] != null) {
 								left.walls[1].destroy();
 								left.walls[1] = null;
 							}
@@ -178,12 +178,6 @@ export class Room extends Group {
 				}
 			}
 		}
-
-		let position = new Point(2, 2);
-		let food = new Food(this.scene, new Progress(100000, 100000));
-		food.create(this.getTile(position).getCoordinate());
-		this.scene.add.existing(food);
-		this.setTile(position, food, true);
 	}
 
 

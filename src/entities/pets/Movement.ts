@@ -38,13 +38,16 @@ export class Movement {
 
 	private init() {
 		this.pathFollower = new PathFollower(this.scene, null, 0, 0, null);
+		this.debugger = new Debugger(this.scene);
+		this.debugger.create();
+		this.debugger.setPet(this.pet);
+		this.debugger.setMovement(this.pathFollower);
 	}
 
 	
 	public setDebugger(debug: boolean) {
 		this.debug = debug;
-		// this.debugger = new Debugger(this.scene);
-		// this.scene.add.existing(this.debugger);
+		this.debugger.setDebug(this.debug);
 	}
 
 
@@ -155,13 +158,13 @@ class Debugger {
 
 	private debug: boolean;
 	private color: number;
+	private pet: Pet;
 	private movement: PathFollower;
 	private graphics: Graphics;
 
 
-	constructor(scene: Scene, debug: boolean) {
+	constructor(scene: Scene) {
 		this.scene = scene;
-		this.debug = debug;
 	}
 
 
@@ -178,6 +181,7 @@ class Debugger {
 
 	public setDebug(debug: boolean) {
 		this.debug = debug;
+		this.graphics.setVisible(this.debug);
 	}
 
 
@@ -186,13 +190,20 @@ class Debugger {
 	}
 
 
+	public setPet(pet: Pet) {
+		this.pet = pet;
+		if (this.pet.type == "bird") this.setColor(0xf9c22b);
+		if (this.pet.type == "dinosaur") this.setColor(0x91db69);
+	}
+
 	public setMovement(movement: PathFollower) {
 		this.movement = movement;
 	}
 
 
 	public update() {
-		if (this.debug)
+		if (!this.debug) return;
+		
 		this.graphics.clear();
 		this.graphics.lineStyle(2, this.color);
 		this.graphics.fillStyle(this.color);
@@ -212,15 +223,16 @@ class Debugger {
 					}
 				}
 
-				this.graphics.moveTo(point.x * Tile.SIZE + Tile.SIZE/2, point.y * Tile.SIZE + Tile.SIZE);
+				let offset = this.pet.room.getTile(new Point(0, 0)).getCoordinate();
+				this.graphics.moveTo(point.x * Tile.SIZE + offset.x, point.y * Tile.SIZE + offset.y);
 				let k = index;
 				while (k < points.length) {
-					this.graphics.lineTo(points[k].x * Tile.SIZE + Tile.SIZE/2, points[k].y * Tile.SIZE + Tile.SIZE);
+					this.graphics.lineTo(points[k].x * Tile.SIZE + offset.x, points[k].y * Tile.SIZE + offset.y);
 					k++;
 				}
 				this.graphics.strokePath();
 
-				// this.graphics.fillRect(coordinate.x * Tile.SIZE + Tile.SIZE/4, this.coordinate.y * Tile.SIZE + 3*Tile.SIZE/4, Tile.SIZE/2, Tile.SIZE/2);
+				this.graphics.fillRect(points[k-1].x * Tile.SIZE + offset.x - Tile.SIZE/4, points[k-1].y * Tile.SIZE + offset.y - Tile.SIZE/4, Tile.SIZE/2, Tile.SIZE/2);
 			}
 		}
 	}

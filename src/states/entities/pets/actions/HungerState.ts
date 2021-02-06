@@ -11,7 +11,6 @@ export class HungerState extends State {
 
 	private pet: Pet;
 
-
 	constructor(machine: StateMachine) {
 		super(machine);
 
