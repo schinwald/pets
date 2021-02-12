@@ -29,7 +29,7 @@ export class Wall extends GameObject implements TileData {
 
 	public create(coordinate: Point) {
 		this.sprite = new Sprite(this.scene, coordinate.x, coordinate.y, 'objects');
-		this.sprite.setFrame('object-wall-' + this.type);
+		this.sprite.setFrame('wall-' + this.type + '-00');
 		this.sprite.setDisplayOrigin(16, 32);
 		if (this.type == 'vertical') {
 			this.sprite.setDepth(coordinate.y + Tile.SIZE/2);

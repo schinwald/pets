@@ -6,32 +6,32 @@
 			"frames": [
 				{
 					"key": "objects",
-					"frame": "object-grave-00",
+					"frame": "grave-enter-00",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-01",
+					"frame": "grave-enter-01",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-02",
+					"frame": "grave-enter-02",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-03",
+					"frame": "grave-enter-03",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-04",
+					"frame": "grave-enter-04",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-05",
+					"frame": "grave-enter-05",
 					"duration": 0
 				}
 			],
@@ -51,32 +51,32 @@
 			"frames": [
 				{
 					"key": "objects",
-					"frame": "object-grave-05",
+					"frame": "grave-enter-05",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-04",
+					"frame": "grave-enter-04",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-03",
+					"frame": "grave-enter-03",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-02",
+					"frame": "grave-enter-02",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-01",
+					"frame": "grave-enter-01",
 					"duration": 0
 				},
 				{
 					"key": "objects",
-					"frame": "object-grave-00",
+					"frame": "grave-enter-00",
 					"duration": 0
 				}
 			],

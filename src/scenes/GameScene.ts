@@ -22,12 +22,14 @@ class GameScene extends Scene {
 		this.load.atlas('pets', './assets/sprites/pets.png', './assets/sprites/pets.json');
 		this.load.atlas('emotes', './assets/sprites/emotes.png', './assets/sprites/emotes.json');
 		this.load.atlas('objects', './assets/sprites/objects.png', './assets/sprites/objects.json');
-		this.load.atlas('particles', './assets/sprites/particles.png', './assets/sprites/particles.json');
+		this.load.atlas('effects', './assets/sprites/effects.png', './assets/sprites/effects.json');
 
 		this.load.animation('dinosaur', './assets/animations/dinosaur.json');
 		this.load.animation('bird', './assets/animations/bird.json');
 		this.load.animation('emotes', './assets/animations/emotes.json');
 		this.load.animation('grave', './assets/animations/grave.json');
+		this.load.animation('egg', './assets/animations/egg.json');
+		this.load.animation('explosion', './assets/animations/explosion.json');
 
 		this.load.glsl('ground', './assets/shaders/ground.glsl.js');
 	}
@@ -51,8 +53,25 @@ class GameScene extends Scene {
 		this.add.existing(food);
 		this.room.setTile(position, food, true);
 
-		this.room.invite(new Pet(this, 'bird'));
-		this.room.invite(new Pet(this, 'dinosaur'));
+		let emptyTiles = this.room.getTiles('empty');
+		
+		let bird = new Pet(this, 'bird');
+		this.room.invite(bird);
+
+		if (emptyTiles.length > 0) {
+			let random = Math.floor(Math.random() * emptyTiles.length);
+			let tile = emptyTiles[random];
+			if (!bird.place(tile.getPosition())) return;
+		}
+
+		let dinosaur = new Pet(this, 'dinosaur');
+		this.room.invite(dinosaur);
+
+		if (emptyTiles.length > 0) {
+			let random = Math.floor(Math.random() * emptyTiles.length);
+			let tile = emptyTiles[random];
+			if (!dinosaur.place(tile.getPosition())) return;
+		}
 	}
 
 

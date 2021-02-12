@@ -42,7 +42,7 @@ class Food extends GameObject implements TileData {
 		this.sprite.setDepth(coordinate.y);
 		this.scene.add.existing(this.sprite);
 
-		this.particles = new ParticleEmitterManager(this.scene, 'particles');
+		this.particles = new ParticleEmitterManager(this.scene, 'effects');
 		
 		this.emitter = new ParticleEmitter(this.particles, {
 			alpha: { start: 1, end: 0, ease: 'Sin.easeOut' },
@@ -62,11 +62,11 @@ class Food extends GameObject implements TileData {
 		this.scene.add.existing(this.particles);
 
 		if (this.progress.getPercentage() > 50) {
-			this.sprite.setFrame('object-food-full');
+			this.sprite.setFrame('food-full-00');
 		} else if (this.progress.getPercentage() > 0) {
-			this.sprite.setFrame('object-food-half');
+			this.sprite.setFrame('food-half-00');
 		} else if (this.progress.getPercentage() == 0) {
-			this.sprite.setFrame('object-food-empty');
+			this.sprite.setFrame('food-empty-00');
 		}
 	}
 
@@ -87,11 +87,11 @@ class Food extends GameObject implements TileData {
 		}
 
 		if (this.progress.getPercentage() > 70) {
-			this.sprite.setFrame('object-food-full');
+			this.sprite.setFrame('food-full-00');
 		} else if (this.progress.getPercentage() > 0) {
-			this.sprite.setFrame('object-food-half');
+			this.sprite.setFrame('food-half-00');
 		} else if (this.progress.getPercentage() == 0) {
-			this.sprite.setFrame('object-food-empty');
+			this.sprite.setFrame('food-empty-00');
 		}
 	}
 

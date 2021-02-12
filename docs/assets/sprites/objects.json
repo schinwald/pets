@@ -4,13 +4,118 @@
 			"image": "",
 			"format": "RGBA8888",
 			"size": {
-				"w": 62,
-				"h": 69
+				"w": 96,
+				"h": 107
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "object-wall-vertical",
+					"filename": "egg-crack-05",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 24,
+						"w": 32,
+						"h": 10
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 10
+					}
+				},
+				{
+					"filename": "egg-crack-06",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 29,
+						"w": 32,
+						"h": 5
+					},
+					"frame": {
+						"x": 0,
+						"y": 10,
+						"w": 32,
+						"h": 5
+					}
+				},
+				{
+					"filename": "egg-crack-07",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 29,
+						"w": 32,
+						"h": 5
+					},
+					"frame": {
+						"x": 0,
+						"y": 15,
+						"w": 32,
+						"h": 5
+					}
+				},
+				{
+					"filename": "egg-crack-04",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 15,
+						"w": 30,
+						"h": 19
+					},
+					"frame": {
+						"x": 0,
+						"y": 20,
+						"w": 30,
+						"h": 19
+					}
+				},
+				{
+					"filename": "egg-crack-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 10,
+						"w": 28,
+						"h": 24
+					},
+					"frame": {
+						"x": 32,
+						"y": 0,
+						"w": 28,
+						"h": 24
+					}
+				},
+				{
+					"filename": "wall-vertical-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -24,14 +129,14 @@
 						"h": 27
 					},
 					"frame": {
-						"x": 0,
-						"y": 0,
+						"x": 30,
+						"y": 20,
 						"w": 2,
 						"h": 27
 					}
 				},
 				{
-					"filename": "object-grave-04",
+					"filename": "egg-crack-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -39,20 +144,20 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 8,
-						"y": 14,
-						"w": 15,
-						"h": 20
+						"x": 4,
+						"y": 10,
+						"w": 23,
+						"h": 24
 					},
 					"frame": {
-						"x": 2,
-						"y": 0,
-						"w": 15,
-						"h": 20
+						"x": 0,
+						"y": 39,
+						"w": 23,
+						"h": 24
 					}
 				},
 				{
-					"filename": "object-grave-05",
+					"filename": "egg-enter-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -60,20 +165,146 @@
 						"h": 48
 					},
 					"spriteSourceSize": {
-						"x": 8,
+						"x": 9,
+						"y": 11,
+						"w": 14,
+						"h": 23
+					},
+					"frame": {
+						"x": 32,
+						"y": 24,
+						"w": 14,
+						"h": 23
+					}
+				},
+				{
+					"filename": "egg-crack-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 12,
+						"w": 18,
+						"h": 22
+					},
+					"frame": {
+						"x": 60,
+						"y": 0,
+						"w": 18,
+						"h": 22
+					}
+				},
+				{
+					"filename": "egg-enter-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 13,
+						"w": 12,
+						"h": 21
+					},
+					"frame": {
+						"x": 60,
+						"y": 22,
+						"w": 12,
+						"h": 21
+					}
+				},
+				{
+					"filename": "egg-enter-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 13,
+						"w": 14,
+						"h": 21
+					},
+					"frame": {
+						"x": 46,
+						"y": 24,
+						"w": 14,
+						"h": 21
+					}
+				},
+				{
+					"filename": "grave-enter-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
 						"y": 14,
-						"w": 16,
+						"w": 14,
 						"h": 20
 					},
 					"frame": {
-						"x": 17,
-						"y": 0,
-						"w": 16,
+						"x": 46,
+						"y": 45,
+						"w": 14,
 						"h": 20
 					}
 				},
 				{
-					"filename": "object-grave-03",
+					"filename": "egg-crack-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 15,
+						"w": 14,
+						"h": 19
+					},
+					"frame": {
+						"x": 23,
+						"y": 47,
+						"w": 14,
+						"h": 19
+					}
+				},
+				{
+					"filename": "grave-enter-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 15,
+						"w": 12,
+						"h": 19
+					},
+					"frame": {
+						"x": 60,
+						"y": 43,
+						"w": 12,
+						"h": 19
+					}
+				},
+				{
+					"filename": "grave-enter-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -88,13 +319,97 @@
 					},
 					"frame": {
 						"x": 0,
-						"y": 27,
+						"y": 66,
 						"w": 14,
 						"h": 19
 					}
 				},
 				{
-					"filename": "object-wall-horizontal",
+					"filename": "grave-enter-04",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 15,
+						"h": 19
+					},
+					"frame": {
+						"x": 14,
+						"y": 66,
+						"w": 15,
+						"h": 19
+					}
+				},
+				{
+					"filename": "grave-enter-05",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 15,
+						"w": 16,
+						"h": 19
+					},
+					"frame": {
+						"x": 29,
+						"y": 66,
+						"w": 16,
+						"h": 19
+					}
+				},
+				{
+					"filename": "egg-shake-01",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 16,
+						"w": 14,
+						"h": 18
+					},
+					"frame": {
+						"x": 45,
+						"y": 65,
+						"w": 14,
+						"h": 18
+					}
+				},
+				{
+					"filename": "egg-shake-02",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 16,
+						"w": 14,
+						"h": 18
+					},
+					"frame": {
+						"x": 59,
+						"y": 65,
+						"w": 14,
+						"h": 18
+					}
+				},
+				{
+					"filename": "wall-horizontal-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -108,14 +423,35 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 14,
-						"y": 20,
+						"x": 78,
+						"y": 0,
 						"w": 18,
 						"h": 11
 					}
 				},
 				{
-					"filename": "object-poop-01",
+					"filename": "egg-enter-04",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 18,
+						"w": 14,
+						"h": 16
+					},
+					"frame": {
+						"x": 78,
+						"y": 11,
+						"w": 14,
+						"h": 16
+					}
+				},
+				{
+					"filename": "poop-idle-01",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -129,14 +465,14 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 14,
-						"y": 31,
+						"x": 73,
+						"y": 27,
 						"w": 15,
 						"h": 12
 					}
 				},
 				{
-					"filename": "object-poop-04",
+					"filename": "poop-idle-04",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -150,14 +486,14 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 33,
-						"y": 0,
+						"x": 73,
+						"y": 39,
 						"w": 15,
 						"h": 12
 					}
 				},
 				{
-					"filename": "object-poop-05",
+					"filename": "poop-idle-05",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -171,14 +507,14 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 33,
-						"y": 12,
+						"x": 72,
+						"y": 51,
 						"w": 15,
 						"h": 12
 					}
 				},
 				{
-					"filename": "object-food-empty",
+					"filename": "food-empty-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -192,14 +528,14 @@
 						"h": 8
 					},
 					"frame": {
-						"x": 32,
-						"y": 24,
+						"x": 73,
+						"y": 63,
 						"w": 14,
 						"h": 8
 					}
 				},
 				{
-					"filename": "object-food-full",
+					"filename": "food-full-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -213,14 +549,14 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 29,
-						"y": 32,
+						"x": 73,
+						"y": 71,
 						"w": 14,
 						"h": 11
 					}
 				},
 				{
-					"filename": "object-food-half",
+					"filename": "food-half-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -235,34 +571,13 @@
 					},
 					"frame": {
 						"x": 0,
-						"y": 46,
+						"y": 85,
 						"w": 14,
 						"h": 9
 					}
 				},
 				{
-					"filename": "object-grave-02",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 9,
-						"y": 21,
-						"w": 14,
-						"h": 13
-					},
-					"frame": {
-						"x": 48,
-						"y": 0,
-						"w": 14,
-						"h": 13
-					}
-				},
-				{
-					"filename": "object-poop-00",
+					"filename": "poop-idle-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -276,14 +591,14 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 48,
-						"y": 13,
+						"x": 45,
+						"y": 83,
 						"w": 14,
 						"h": 11
 					}
 				},
 				{
-					"filename": "object-poop-02",
+					"filename": "poop-idle-02",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -295,58 +610,58 @@
 						"y": 23,
 						"w": 14,
 						"h": 13
-					},
-					"frame": {
-						"x": 46,
-						"y": 24,
-						"w": 14,
-						"h": 13
-					}
-				},
-				{
-					"filename": "object-poop-06",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 10,
-						"y": 23,
-						"w": 14,
-						"h": 14
-					},
-					"frame": {
-						"x": 43,
-						"y": 37,
-						"w": 14,
-						"h": 14
-					}
-				},
-				{
-					"filename": "object-poop-07",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 10,
-						"y": 24,
-						"w": 12,
-						"h": 14
 					},
 					"frame": {
 						"x": 0,
-						"y": 55,
+						"y": 94,
+						"w": 14,
+						"h": 13
+					}
+				},
+				{
+					"filename": "poop-idle-06",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 23,
+						"w": 14,
+						"h": 14
+					},
+					"frame": {
+						"x": 14,
+						"y": 85,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "poop-idle-07",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 24,
+						"w": 12,
+						"h": 14
+					},
+					"frame": {
+						"x": 28,
+						"y": 85,
 						"w": 12,
 						"h": 14
 					}
 				},
 				{
-					"filename": "object-poop-03",
+					"filename": "poop-idle-03",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -360,14 +675,14 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 12,
-						"y": 55,
+						"x": 40,
+						"y": 94,
 						"w": 13,
 						"h": 13
 					}
 				},
 				{
-					"filename": "object-poop-08",
+					"filename": "poop-idle-08",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -381,14 +696,14 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 14,
-						"y": 43,
+						"x": 53,
+						"y": 94,
 						"w": 13,
 						"h": 12
 					}
 				},
 				{
-					"filename": "object-poop-10",
+					"filename": "poop-idle-10",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -402,14 +717,14 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 25,
-						"y": 55,
+						"x": 73,
+						"y": 82,
 						"w": 12,
 						"h": 13
 					}
 				},
 				{
-					"filename": "object-grave-00",
+					"filename": "grave-enter-00",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -418,40 +733,19 @@
 					},
 					"spriteSourceSize": {
 						"x": 10,
-						"y": 33,
+						"y": 25,
 						"w": 12,
-						"h": 1
+						"h": 9
 					},
 					"frame": {
-						"x": 2,
-						"y": 20,
+						"x": 59,
+						"y": 83,
 						"w": 12,
-						"h": 1
+						"h": 9
 					}
 				},
 				{
-					"filename": "object-grave-01",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 32,
-						"h": 48
-					},
-					"spriteSourceSize": {
-						"x": 10,
-						"y": 27,
-						"w": 12,
-						"h": 7
-					},
-					"frame": {
-						"x": 27,
-						"y": 43,
-						"w": 12,
-						"h": 7
-					}
-				},
-				{
-					"filename": "object-poop-09",
+					"filename": "poop-idle-09",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -465,14 +759,14 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 37,
-						"y": 51,
+						"x": 66,
+						"y": 95,
 						"w": 12,
 						"h": 12
 					}
 				},
 				{
-					"filename": "object-poop-11",
+					"filename": "poop-idle-11",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -486,10 +780,94 @@
 						"h": 12
 					},
 					"frame": {
-						"x": 49,
-						"y": 51,
+						"x": 78,
+						"y": 95,
 						"w": 12,
 						"h": 12
+					}
+				},
+				{
+					"filename": "egg-enter-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 28,
+						"w": 10,
+						"h": 6
+					},
+					"frame": {
+						"x": 85,
+						"y": 82,
+						"w": 10,
+						"h": 6
+					}
+				},
+				{
+					"filename": "egg-enter-05",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 15,
+						"w": 14,
+						"h": 19
+					},
+					"frame": {
+						"x": 23,
+						"y": 47,
+						"w": 14,
+						"h": 19
+					}
+				},
+				{
+					"filename": "egg-shake-00",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 15,
+						"w": 14,
+						"h": 19
+					},
+					"frame": {
+						"x": 23,
+						"y": 47,
+						"w": 14,
+						"h": 19
+					}
+				},
+				{
+					"filename": "egg-shake-03",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 15,
+						"w": 14,
+						"h": 19
+					},
+					"frame": {
+						"x": 23,
+						"y": 47,
+						"w": 14,
+						"h": 19
 					}
 				}
 			]

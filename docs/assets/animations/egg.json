@@ -1,0 +1,139 @@
+{
+	"anims": [
+		{
+			"key": "egg-enter",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "objects",
+					"frame": "egg-enter-00",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-enter-01",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-enter-02",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-enter-03",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-enter-04",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-enter-05",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": true,
+			"hideOnComplete": false
+		},
+		{
+			"key": "egg-crack",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "objects",
+					"frame": "egg-crack-00",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-crack-01",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-crack-02",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-crack-03",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-crack-04",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-crack-05",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-crack-06",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-crack-07",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		},
+		{
+			"key": "egg-shake",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "objects",
+					"frame": "egg-shake-00",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-shake-01",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-shake-02",
+					"duration": 0
+				},
+				{
+					"key": "objects",
+					"frame": "egg-shake-03",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": false,
+			"hideOnComplete": false
+		}
+	]
+}

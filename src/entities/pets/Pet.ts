@@ -95,22 +95,25 @@ class Pet extends GameObject {
 
 	public setRoom(room: Room) {
 		this.room = room;
-		if (room == null) return;
+	}
 
-		let emptyTiles = this.room.getTiles('empty');
 
-		if (emptyTiles.length > 0) {
-			let random = Math.floor(Math.random() * emptyTiles.length);
-			let tile = emptyTiles[random];
-			this.create(tile.getPosition());
+	public place(position: Point): boolean {
+		if (this.room == null) return false;
 
-			this.movement = new Movement(this.scene, this);
-			this.movement.setDebugger(true);
-			this.movement.copyPosition(tile.getPosition());
+		let tile = this.room.getTile(position);
+		if (tile == null) return false;
 
-			this.emotions.transition('neutral');
-			this.actions.transition('idle');
-		}
+		this.create(position);
+
+		this.movement = new Movement(this.scene, this);
+		this.movement.setDebugger(true);
+		this.movement.copyPosition(position);
+
+		this.emotions.transition('neutral');
+		this.actions.transition('idle');
+
+		return true;
 	}
 
 

@@ -1,0 +1,49 @@
+{
+	"anims": [
+		{
+			"key": "explosion-01",
+			"type": "frame",
+			"frames": [
+				{
+					"key": "effects",
+					"frame": "explosion-01-00",
+					"duration": 0
+				},
+				{
+					"key": "effects",
+					"frame": "explosion-01-01",
+					"duration": 0
+				},
+				{
+					"key": "effects",
+					"frame": "explosion-01-02",
+					"duration": 0
+				},
+				{
+					"key": "effects",
+					"frame": "explosion-01-03",
+					"duration": 0
+				},
+				{
+					"key": "effects",
+					"frame": "explosion-01-04",
+					"duration": 0
+				},
+				{
+					"key": "effects",
+					"frame": "explosion-01-05",
+					"duration": 0
+				}
+			],
+			"frameRate": 4,
+			"duration": 1000,
+			"skipMissedFrames": true,
+			"delay": 0,
+			"repeat": 0,
+			"repeatDelay": 0,
+			"yoyo": false,
+			"showOnStart": true,
+			"hideOnComplete": true
+		}
+	]
+}

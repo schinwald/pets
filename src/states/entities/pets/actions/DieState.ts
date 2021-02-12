@@ -38,20 +38,22 @@ export class DieState extends State {
 				targets: this.pet,
 				alpha: { from: 1, to: 0 },
 				ease: 'Linear',
-				duration: 1000,
+				duration: 500,
 				onComplete: () => {
 					let position = this.pet.getPosition();
 					let grave = new Grave(this.scene);
 					this.room.setTile(position, grave, false);
 
 					let tile = this.room.getTile(position);
+					grave.setRoom(this.room);
+					grave.place(position);
 					grave.create(tile.getCoordinate());
 					grave.play('show');
 
 					this.room.uninvite(this.pet);
 					this.pet.destroy();
 				}
-			})
+			});
 		}, this);
 	}
 

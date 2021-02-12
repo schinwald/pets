@@ -96,23 +96,27 @@ export class Room extends Group {
 					zone.setInteractive();
 
 					zone.on('pointerdown', (pointer) => {
-						if (pointer.leftButtonDown()) {
+						this.scene.input.setDefaultCursor('url(./assets/cursors/grabbing.png) 5 5, grabbing');
+					});
+
+					zone.on('pointerup', (pointer) => {
+						this.scene.input.setDefaultCursor('url(./assets/cursors/pointer.png) 5 5, pointer');
+
+						if (pointer.leftButtonReleased()) {							
 							let wall = new Wall(this.scene, "horizontal");
 							wall.setRoom(this);
 							if (wall.place(position)) wall.create(coordinate);
 							else wall.destroy();
-						} else if (pointer.rightButtonDown()) {
+						} else if (pointer.rightButtonReleased()) {
 							let below = this.getTile(new Point(position.x, position.y + 0.5));
 							if (below != null && below.walls[0] != null) {
 								below.walls[0].destroy();
-								console.log(below.walls[0]);
 								below.walls[0] = null;
 							}
 
 							let above = this.getTile(new Point(position.x, position.y - 0.5));
 							if (above != null && above.walls[2] != null) {
 								above.walls[2].destroy();
-								console.log(above.walls[2]);
 								above.walls[2] = null;
 							}
 						}
@@ -140,14 +144,20 @@ export class Room extends Group {
 					let zone = new Zone(this.scene, coordinate.x, coordinate.y, Tile.SIZE/4, Tile.SIZE - Tile.SIZE/4);
 
 					zone.setInteractive();
-					
+
 					zone.on('pointerdown', (pointer) => {
-						if (pointer.leftButtonDown()) {
+						this.scene.input.setDefaultCursor('url(./assets/cursors/grabbing.png) 5 5, grabbing');
+					});
+
+					zone.on('pointerup', (pointer) => {
+						this.scene.input.setDefaultCursor('url(./assets/cursors/pointer.png) 5 5, pointer');
+
+						if (pointer.leftButtonReleased()) {
 							let wall = new Wall(this.scene, "vertical");
 							wall.setRoom(this);
 							if (wall.place(position)) wall.create(coordinate);
 							else wall.destroy();
-						} else if (pointer.rightButtonDown()) {
+						} else if (pointer.rightButtonReleased()) {
 							let right = this.getTile(new Point(position.x + 0.5, position.y));
 							if (right != null && right.walls[3] != null) {
 								right.walls[3].destroy();
