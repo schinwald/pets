@@ -102,24 +102,30 @@ export class Room extends Group {
 					zone.on('pointerup', (pointer) => {
 						this.scene.input.setDefaultCursor('url(./assets/cursors/pointer.png) 5 5, pointer');
 
-						if (pointer.leftButtonReleased()) {							
+						// place wall
+						if (pointer.leftButtonReleased()) {					
 							let wall = new Wall(this.scene, "horizontal");
 							wall.setRoom(this);
 							if (wall.place(position)) wall.create(coordinate);
 							else wall.destroy();
+						// remove wall
 						} else if (pointer.rightButtonReleased()) {
 							let below = this.getTile(new Point(position.x, position.y + 0.5));
 							if (below != null && below.walls[0] != null) {
 								below.walls[0].destroy();
 								below.walls[0] = null;
 							}
-
 							let above = this.getTile(new Point(position.x, position.y - 0.5));
 							if (above != null && above.walls[2] != null) {
 								above.walls[2].destroy();
 								above.walls[2] = null;
 							}
 						}
+
+						this.pets.each((pet) => {
+							let target = pet.movement.getTarget();
+							pet.movement.move(target);
+						});
 					});
 
 					let rectangle = new Rectangle(this.scene, coordinate.x, coordinate.y, Tile.SIZE - Tile.SIZE/4, Tile.SIZE/4, 0x000000, 0.3);
@@ -152,24 +158,30 @@ export class Room extends Group {
 					zone.on('pointerup', (pointer) => {
 						this.scene.input.setDefaultCursor('url(./assets/cursors/pointer.png) 5 5, pointer');
 
+						// place wall
 						if (pointer.leftButtonReleased()) {
 							let wall = new Wall(this.scene, "vertical");
 							wall.setRoom(this);
 							if (wall.place(position)) wall.create(coordinate);
 							else wall.destroy();
+						// remove wall
 						} else if (pointer.rightButtonReleased()) {
 							let right = this.getTile(new Point(position.x + 0.5, position.y));
 							if (right != null && right.walls[3] != null) {
 								right.walls[3].destroy();
 								right.walls[3] = null;
 							}
-
 							let left = this.getTile(new Point(position.x - 0.5, position.y));
 							if (left != null && left.walls[3] != null) {
 								left.walls[1].destroy();
 								left.walls[1] = null;
 							}
 						}
+
+						this.pets.each((pet) => {
+							let target = pet.movement.getTarget();
+							pet.movement.move(target);
+						});
 					});
 
 					let rectangle = new Rectangle(this.scene, coordinate.x, coordinate.y, Tile.SIZE/4, Tile.SIZE - Tile.SIZE/4, 0x000000, 0.3);

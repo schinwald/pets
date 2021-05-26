@@ -2,6 +2,7 @@ import { Food } from "../../../../objects/Food";
 import { State } from "../../../State";
 import { StateMachine } from '../../../StateMachine';
 import { Pet } from "../../../../entities/pets/Pet";
+import { Movement } from "../../../../entities/pets/Movement";
 
 
 
@@ -23,11 +24,16 @@ export class EatState extends State {
 	public enter() {
 		this.pet.play('eat');
 
-		let position = this.pet.getTarget();
-		let tile = this.pet.room.getTile(position);
-		let food = tile.getData() as Food;
-		food.interact(this.pet);
-		food.eat(true);
+		let position = this.pet.getPosition();
+		let target = this.pet.getTarget();
+		if (this.pet.room.calculateDistance(position, target) <= 1) {
+			let tile = this.pet.room.getTile(target);
+			let food = tile.getData() as Food;
+			food.interact(this.pet);
+			food.eat(true);
+		} else {
+			this.machine.transition('idle');
+		}
 	}
 
 

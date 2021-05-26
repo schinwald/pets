@@ -35,7 +35,7 @@
 					"duration": 0
 				}
 			],
-			"frameRate": 4,
+			"frameRate": 8,
 			"duration": 1000,
 			"skipMissedFrames": true,
 			"delay": 0,

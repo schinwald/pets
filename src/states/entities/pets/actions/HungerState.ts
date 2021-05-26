@@ -31,7 +31,6 @@ export class HungerState extends State {
 			let food = tile.getData() as Food;
 			if (food.getProgress().getPercentage() == 0) continue; // don't bother going to food tile if it empty
 			let distance = this.pet.room.calculateDistance(this.pet.getPosition(), tile.getPosition());
-
 			if (i == 0 || distance < shortestDistance) {
 				shortestDistance = distance
 				shortestIndex = i;
@@ -58,11 +57,10 @@ export class HungerState extends State {
 		for (let i = 0; i < 4; i++) {
 			let adjacent = adjacents[i];
 			let tile = this.pet.room.getTile(adjacent);
-			if (tile == null) continue; // don't bother going to adjacent tile if it is null
+			if (tile == null) continue; // don't bother going to adjacent tile if it is null (past grid)
 			let distance = this.pet.room.calculateDistance(this.pet.getPosition(), tile.getPosition());
-
 			if (i == 0 || distance < shortestDistance) {
-				shortestDistance = distance
+				shortestDistance = distance;
 				shortestIndex = i;
 			}
 		}
