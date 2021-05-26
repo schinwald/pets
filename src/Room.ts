@@ -172,7 +172,7 @@ export class Room extends Group {
 								right.walls[3] = null;
 							}
 							let left = this.getTile(new Point(position.x - 0.5, position.y));
-							if (left != null && left.walls[3] != null) {
+							if (left != null && left.walls[1] != null) {
 								left.walls[1].destroy();
 								left.walls[1] = null;
 							}

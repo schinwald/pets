@@ -70,8 +70,6 @@ export class HungerState extends State {
 			return;
 		}
 
-		console.log(this.pet.getPosition(), adjacents[shortestIndex]);
-
 		this.pet.movement.move(adjacents[shortestIndex]);
 		this.pet.setTarget(position);
 		this.pet.play('walk');
