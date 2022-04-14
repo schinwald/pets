@@ -1,14 +1,18 @@
-# Pet Game
+![Pets](/logo.svg)
 
-### :video_game: [Play Demo Here](https://schinwald.github.io/pets/ "Pet Game")
+:joystick: [Demo](https://schinwald.github.io/pets/)
 
-## Features
+## Description
 
 Observe two distinct pets traverse the room using an A* path-finding algorithm. Add walls to the room to make it more challenging for pets to find food - or even impossible if you're evil...
 
 - Add walls by right clicking on edges
 - Remove walls by left clicking on edges
 - Click on graves to remove them and spawn an egg
+
+## Preview
+
+None
 
 ## Learning Outcomes
 

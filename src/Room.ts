@@ -72,7 +72,7 @@ export class Room extends Group {
 				zone.setInteractive();
 				zone.on('pointerdown', (pointer) => {
 					if (pointer.leftButtonDown()) {
-						console.log(tile);
+						
 					}
 				}, tile);
 				this.scene.add.existing(zone);
